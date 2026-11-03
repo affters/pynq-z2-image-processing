@@ -1,0 +1,54 @@
+{
+  "started_utc": "2026-11-01T01:58:36.225119+00:00",
+  "source": "fixed_rgb_fixtures",
+  "port": "COM6",
+  "baudrate": 2000000,
+  "timeout_seconds": 20.0,
+  "info_handshake_passed": true,
+  "hardware_test_attempted": true,
+  "hardware_test": true,
+  "actual_fpga_frames_verified": 1,
+  "camera_test": false,
+  "linux_test": false,
+  "planned_frames": 1,
+  "all_requested_frames_passed": true,
+  "requested_action_passed": true,
+  "cases": [
+    {
+      "sequence": 2804760541,
+      "mode": 0,
+      "core_status": 2,
+      "response_crc32": 1760537015,
+      "uart_roundtrip_seconds": 0.30270100000780076,
+      "request_payload_bytes": 36864,
+      "response_payload_bytes": 12288,
+      "name": "frame0_mode0",
+      "frame": 0,
+      "mode_name": "gray",
+      "input_shape": [
+        96,
+        128,
+        3
+      ],
+      "output_shape": [
+        96,
+        128
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0,
+      "host_numpy_reference_seconds": 0.00013760000001639128
+    }
+  ],
+  "inputs": [
+    {
+      "path": ".\\output\\hardware\\run_20261029_074543_utc\\input_frame0.bin",
+      "sha256": "93f4cf597146e36be61cb30905e394167e81272fb718bc63b3321661ea4fedcb"
+    }
+  ],
+  "error": null,
+  "timing_note": "uart_roundtrip includes UART transfer, ARM control and FPGA work; excludes host RGB packing/reference/display. It is not PL latency or video FPS.",
+  "firmware_info": "pynq_uart_image_v1",
+  "info_roundtrip_seconds": 0.01534349995199591,
+  "completed_utc": "2026-11-01T01:58:36.714445+00:00"
+}

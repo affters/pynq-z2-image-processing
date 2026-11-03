@@ -1,0 +1,43 @@
+UART_IMAGE_TARGETS=  1  APU
+     2  ARM Cortex-A9 MPCore #0 (Running)
+     3  ARM Cortex-A9 MPCore #1 (Running)
+  4  xc7z020
+UART_IMAGE_INITIAL_PL_STATE=FPGA is not configured
+UART_IMAGE_PRE_BOOT_STATE=F8000258:   0040200A
+F800025C:   00000005
+
+UART_IMAGE_FPGA_STATE=FPGA is configured
+UART_IMAGE_PS_INIT_COMPLETE
+couldn't open "C:/Users/[user]//Local/Temp/pynq_uart_2436d3a6c342453f8bde65e46ac82192/firmware.elf": no such file or directory
+    invoked from within
+"::tcf::eval -progress {
+	    apply {{info} {
+		if { $::xsdb::silent_mode == 0 } {
+		    switch -- [lindex $info 0] {
+			"info" {
+			    puts -nonewline "\r[lindex $info 1]"
+			}
+			"warning" {
+			    puts "\n[lindex $info 1]"
+			}
+			"data" {
+			    puts -nonewline "\r[lindex $info 1] of [lindex $info 2] complete"
+			}
+			"done" {
+			    puts "\n[lindex $info 1]"
+			}
+		    }
+		    flush stdout
+		}
+		::xsdb::abort_check
+	    }}} {::tcf::cache_enter tcfchan#0 {tcf_cache_eval {download_cache_client ::tcfclient#0::arg}}}"
+    (procedure "::tcf::cache_eval_with_progress" line 2)
+    invoked from within
+"::tcf::cache_eval_with_progress $params(chan) [list download_cache_client $argvar] {
+	    apply {{info} {
+		if { $::xsdb::silent_mode == 0 } {
+		    s..."
+    (procedure "dow" line 99)
+    invoked from within
+"dow $firmware"
+    (file "C:/Users/[user]\AppData\Local\Temp\pynq_uart_2436d3a6c342453f8bde65e46ac82192\load.tcl" line 42)

@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/[user]/AppData/Local/Temp/codex_pfga_window_m3_128x96_d7cb5d03e1f94f159f8d70ab5f4a3e3a/rtl/gray_filter_3x3.v" into library work
+INFO: [VRFC 10-311] analyzing module gray_filter_3x3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/[user]/AppData/Local/Temp/codex_pfga_window_m3_128x96_d7cb5d03e1f94f159f8d70ab5f4a3e3a/sim/tb_gray_filter_3x3.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_gray_filter_3x3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/[user]/AppData/Local/Temp/codex_pfga_window_m3_128x96_d7cb5d03e1f94f159f8d70ab5f4a3e3a/sim/tb_image_case.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_image_case

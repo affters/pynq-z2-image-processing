@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/[user]/AppData/Local/Temp/codex_pfga_gray_5a9264347e664cebb9bf086b3f1dfd3d/rtl/rgb_to_gray.v" into library work
+INFO: [VRFC 10-311] analyzing module rgb_to_gray
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/[user]/AppData/Local/Temp/codex_pfga_gray_5a9264347e664cebb9bf086b3f1dfd3d/sim/tb_rgb_to_gray.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_rgb_to_gray

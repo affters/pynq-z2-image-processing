@@ -1,0 +1,31 @@
+{
+  "sequence": 3293871012,
+  "mode": 1,
+  "core_status": 2,
+  "response_crc32": 733527300,
+  "uart_roundtrip_seconds": 0.299136699992232,
+  "request_payload_bytes": 36864,
+  "response_payload_bytes": 11844,
+  "capture_resize_seconds": 0.0006215000030351803,
+  "host_numpy_reference_seconds": 0.0002494999935152009,
+  "input_rgb_sha256": "1a6e7832b0e4265eaa71559af02e87c23110cc921af3c92efa1b369917078299",
+  "frame": 0,
+  "mode_name": "gaussian",
+  "source_bgr_shape": [
+    480,
+    640,
+    3
+  ],
+  "input_rgb_shape": [
+    96,
+    128,
+    3
+  ],
+  "output_shape": [
+    94,
+    126
+  ],
+  "exact_match": true,
+  "mismatch_pixels": 0,
+  "max_abs_error": 0
+}

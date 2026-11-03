@@ -1,0 +1,11 @@
+{
+  "pixel_count": 14560,
+  "exact_match": true,
+  "max_error_vs_selected_integer_algorithm": 0,
+  "max_error_vs_rounded_decimal_coefficients": 1,
+  "image_width": 128,
+  "image_height": 96,
+  "formula": "(77*R + 150*G + 29*B + 128) // 256",
+  "source": "Vivado XSim RTL output",
+  "hardware_test": false
+}

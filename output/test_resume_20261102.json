@@ -1,0 +1,101 @@
+{
+  "recorded_utc": "2026-11-02T11:30:44.557345+00:00",
+  "scope": "Actual Nov2 hardware tests with saved-result consistency review; no new firmware or RTL edits",
+  "results": [
+    {
+      "kind": "fixed",
+      "path": "output/uart_demo/run_20261102_092320_utc_3e021f3a/result.json",
+      "sha256": "f4cf469df9bc313fbc3c381548d229ba6604abacc443c1af7da0179211121ad5",
+      "frames": 10,
+      "modes": {
+        "0": 2,
+        "1": 2,
+        "2": 2,
+        "3": 2,
+        "4": 2
+      },
+      "all_exact": true,
+      "error": null,
+      "cleanup_errors": null,
+      "last_loop_fps": null,
+      "source_original_sha256": "c341918002762230299ab0bc5ca3229f858a116a4fb804d9b98ec052bb5d07e0",
+      "source_original_bytes": null,
+      "bytes": 7073
+    },
+    {
+      "kind": "camera",
+      "path": "output/uart_camera/run_20261102_092416_utc_30b93c8f/result.json",
+      "sha256": "1021a70019b8fd21eeff5c05f978afb1d99c9c3f16add64e38423f61373de2a4",
+      "frames": 10,
+      "modes": {
+        "0": 2,
+        "1": 2,
+        "2": 2,
+        "3": 2,
+        "4": 2
+      },
+      "all_exact": true,
+      "error": null,
+      "cleanup_errors": [],
+      "last_loop_fps": null,
+      "source_original_sha256": "7cb3041e86dfd784b2628a64d66e78dbc929fb314ae9187bacd2ef1a0e33c579",
+      "source_original_bytes": null,
+      "bytes": 9187
+    },
+    {
+      "kind": "gui_1",
+      "path": "output/uart_live/session_20261102_101032_950a05f0/result.json",
+      "sha256": "2079f1a425eec696f32b9413c7511557acc36aa798775981c5925bb5cc47a427",
+      "frames": 9291,
+      "modes": {
+        "0": 884,
+        "1": 8407
+      },
+      "all_exact": true,
+      "error": null,
+      "cleanup_errors": [],
+      "last_loop_fps": 3.206553084086034,
+      "source_original_sha256": "70f9047a49c15ed5bb2c1b6d8b44d108698cb6f593c1a94f7db10129b0d7b062",
+      "source_original_bytes": null,
+      "bytes": 5967320
+    },
+    {
+      "kind": "gui_2",
+      "path": "output/uart_live/session_20261102_111935_29c421e6/result.json",
+      "sha256": "7bb7e0f7cefa6207b3f22b3cdb73dd26ec5822281e5474079dda4770578df91a",
+      "frames": 750,
+      "modes": {
+        "2": 392,
+        "3": 211,
+        "4": 147
+      },
+      "all_exact": true,
+      "error": null,
+      "cleanup_errors": [],
+      "last_loop_fps": 3.2022919502014453,
+      "source_original_sha256": "377435a839d755e8143752cf99a954586327826b1ed6a4cae873b4121540555f",
+      "source_original_bytes": null,
+      "bytes": 481049
+    }
+  ],
+  "gui_total_frames": 10041,
+  "gui_union_verified_modes": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "gui_each_session_covers_all_modes": false,
+  "gui_both_normally_stopped": true,
+  "original_gui_screenshot": {
+    "anonymous": false,
+    "source_original_sha256": "0f405d57b8ade6005843011f082a930943eb0feab1d469a0b1534418443808c2",
+    "included": false,
+    "excluded_reason": "Unanonymized local screenshot is deliberately excluded"
+  },
+  "sd_or_flash_write": false,
+  "linux_test": false,
+  "pl_latency_measured": false,
+  "packaged_copy_note": "Included record hashes address packaged bytes; source_original_* retains original identifiers; numerical results unchanged"
+}

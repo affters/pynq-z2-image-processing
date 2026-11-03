@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-10-31T07:52:58.3796237Z",
+  "stage": "C:/Users/[user]\\AppData\\Local\\Temp\\pynq_uart_10190fde80fa46f3925015a74dfa0f15",
+  "baudrate": 115200,
+  "hashes": {
+    "image_system.bit": "EBE2F73D9FD2D605629CB751A734B0DA2DB1341E9C1E7D21A415979A0A65F3EB",
+    "ps7_init.tcl": "05FF63C18D43E9D8B6B117AB9E5463D76B8235266DAEC17327D23E09FECC788B",
+    "firmware.elf": "0807E023DDB132A7B409AAC602B1FCF22D9E09110996B3FC8B6B4F91D22D350C",
+    "load.tcl": "6F4B2B691AD9F4C1D5CEE3FF893E4DEDDAEA03C44AF49773DA1FEFD36ECA0E17"
+  },
+  "sd_write_performed": false,
+  "flash_write_performed": false,
+  "scope": "Temporary FPGA plus ARM firmware load; transport/image validation is separate"
+}

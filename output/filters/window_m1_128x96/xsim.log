@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Oct 29 10:56:14 2026
+# Process ID: 36672
+# Current directory: C:/Users/[user]/AppData/Local/Temp/codex_pfga_window_m1_128x96_25b3d2a52c074dfb86fda9e0f1109cdf/vectors
+# Command line: xsim.exe -log xsim.log -mode tcl -source {xsim.dir/image_sim/xsim_script.tcl}
+# Log file: C:/Users/[user]/AppData/Local/Temp/codex_pfga_window_m1_128x96_25b3d2a52c074dfb86fda9e0f1109cdf/vectors/xsim.log
+# Journal file: C:/Users/[user]/AppData/Local/Temp/codex_pfga_window_m1_128x96_25b3d2a52c074dfb86fda9e0f1109cdf/vectors\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/image_sim/xsim_script.tcl
+# xsim {image_sim} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+SIM_PASS gray_filter_3x3 count=35532
+$finish called at time : 748196 ns : File "C:/Users/[user]/AppData/Local/Temp/codex_pfga_window_m1_128x96_25b3d2a52c074dfb86fda9e0f1109cdf/sim/tb_gray_filter_3x3.sv" Line 288
+exit
+INFO: [Common 17-206] Exiting xsim at Thu Oct 29 10:56:21 2026...

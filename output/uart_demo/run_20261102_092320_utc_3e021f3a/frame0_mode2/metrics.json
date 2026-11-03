@@ -1,0 +1,25 @@
+{
+  "sequence": 3283452741,
+  "mode": 2,
+  "core_status": 2,
+  "response_crc32": 255883013,
+  "uart_roundtrip_seconds": 0.29953230000683106,
+  "request_payload_bytes": 36864,
+  "response_payload_bytes": 11844,
+  "name": "frame0_mode2",
+  "frame": 0,
+  "mode_name": "sobel",
+  "input_shape": [
+    96,
+    128,
+    3
+  ],
+  "output_shape": [
+    94,
+    126
+  ],
+  "exact_match": true,
+  "mismatch_pixels": 0,
+  "max_abs_error": 0,
+  "host_numpy_reference_seconds": 0.00029889999132137746
+}

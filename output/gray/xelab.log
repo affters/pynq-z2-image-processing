@@ -1,0 +1,13 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/sailingsi/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_rgb_to_gray -s gray_sim 
+Multi-threading is on. Using 14 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.rgb_to_gray
+Compiling module work.tb_rgb_to_gray
+Built simulation snapshot gray_sim

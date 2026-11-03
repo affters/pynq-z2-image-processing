@@ -1,0 +1,18 @@
+{
+  "kind": "window",
+  "mode": 1,
+  "width": 128,
+  "height": 96,
+  "frames": 3,
+  "input_count": 36864,
+  "output_count": 35532,
+  "seed": 20389125,
+  "exact_match": true,
+  "actual_output_count": 35532,
+  "hardware_test": false,
+  "output_width": 126,
+  "output_height": 94,
+  "display_border": "one zero pixel",
+  "noisy_mse_frame1_inner": 393.6175278622087,
+  "filtered_mse_frame1_inner": 122.84050996285039
+}

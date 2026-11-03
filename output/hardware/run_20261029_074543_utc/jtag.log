@@ -1,0 +1,25 @@
+  1  APU
+     2  ARM Cortex-A9 MPCore #0 (Running)
+     3  ARM Cortex-A9 MPCore #1 (Running)
+  4  xc7z020
+PRE_INIT_REBOOT_STATUS=F8000258:   0040200A
+F800025C:   00000005
+
+FPGA_STATE=FPGA is configured
+PS7_INIT_OK
+HARDWARE_ADDRESS_MAP_HWH_VERIFIED_TWO_RANGES=Address             Size      Offset    Flags   FileName            
+=======             ====      ======    =====   ========            
+0x40400000          0x10000   0x0       3                           
+0x41200000          0x10000   0x0       3                           
+DDR_SCRATCH_PASS
+JTAG_FRAME_DONE name=frame0_mode0 output_pixels=12288 core=2 tx=4098 rx=4098
+JTAG_FRAME_DONE name=frame0_mode1 output_pixels=11844 core=2 tx=4098 rx=4098
+JTAG_FRAME_DONE name=frame0_mode2 output_pixels=11844 core=2 tx=4098 rx=4098
+JTAG_FRAME_DONE name=frame0_mode3 output_pixels=11844 core=2 tx=4098 rx=4098
+JTAG_FRAME_DONE name=frame0_mode4 output_pixels=12288 core=2 tx=4098 rx=4098
+JTAG_FRAME_DONE name=frame1_mode0 output_pixels=12288 core=2 tx=4098 rx=4098
+JTAG_FRAME_DONE name=frame1_mode1 output_pixels=11844 core=2 tx=4098 rx=4098
+JTAG_FRAME_DONE name=frame1_mode2 output_pixels=11844 core=2 tx=4098 rx=4098
+JTAG_FRAME_DONE name=frame1_mode3 output_pixels=11844 core=2 tx=4098 rx=4098
+JTAG_FRAME_DONE name=frame1_mode4 output_pixels=12288 core=2 tx=4098 rx=4098
+JTAG_IMAGE_PASS run_id=00d8ad2e8fad4c359f20608d116923b8 cases=10

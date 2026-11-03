@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-11-02T13:17:34.008392+00:00",
+  "source_file": "conversation_visible.jsonl",
+  "source_sha256": "779b122e0eb0b6b35014e849b1b4b7d9c598430b71bb24860939164ef9fd6fb7",
+  "source_manifest_file": "conversation_visible_manifest.json",
+  "source_manifest_sha256": "74571550f3b3c2a6b1b1eee92dd7b54cd2c0d716250ebfe2990c546dd2551411",
+  "output_file": "conversation_submission_anonymous.jsonl",
+  "output_bytes": 112492,
+  "output_sha256": "21f1802df7e439347b812087e865d701087151cf1b6c1b77e5fd7c6af132f2ee",
+  "messages": 297,
+  "user_messages": 96,
+  "assistant_messages": 201,
+  "redaction_counts_by_category": {
+    "local_user_home_prefix": 0,
+    "member_name": 8,
+    "school": 1,
+    "team_number": 1
+  },
+  "redaction_rules": [
+    "Explicit team-number field -> [TEAM_NUMBER], with digit boundaries",
+    "Explicit Chinese/English school fields -> [SCHOOL]",
+    "Explicit Chinese/English member names -> stable [MEMBER_n] tokens",
+    "Local user-home prefix -> C:/Users/[user], if not already redacted"
+  ],
+  "checks": {
+    "source_matches_export_manifest": true,
+    "message_order_timestamp_role_phase_preserved": true,
+    "only_user_and_visible_assistant_messages": true,
+    "all_explicit_identity_fields_absent": true,
+    "original_snapshot_unchanged": true
+  },
+  "complete_platform_export": false,
+  "scope": "Anonymous copy of the existing visible-message snapshot; no new chat sources read; tools/system/developer/internal reasoning excluded upstream; images remain text references.",
+  "limitation": "Rule-based redaction covers the explicit supplied team fields and local home prefix; review other identifying context before public release."
+}

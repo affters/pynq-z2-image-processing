@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Oct 29 10:58:58 2026
+# Process ID: 39388
+# Current directory: C:/Users/[user]/AppData/Local/Temp/codex_pfga_equalize_m1_128x96_b8060aa569a642048676de16ef4dc4dc/vectors
+# Command line: xsim.exe -log xsim.log -mode tcl -source {xsim.dir/image_sim/xsim_script.tcl}
+# Log file: C:/Users/[user]/AppData/Local/Temp/codex_pfga_equalize_m1_128x96_b8060aa569a642048676de16ef4dc4dc/vectors/xsim.log
+# Journal file: C:/Users/[user]/AppData/Local/Temp/codex_pfga_equalize_m1_128x96_b8060aa569a642048676de16ef4dc4dc/vectors\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/image_sim/xsim_script.tcl
+# xsim {image_sim} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+SIM_PASS frame_equalize count=36864
+$finish called at time : 2651876 ns : File "C:/Users/[user]/AppData/Local/Temp/codex_pfga_equalize_m1_128x96_b8060aa569a642048676de16ef4dc4dc/sim/tb_frame_equalize.sv" Line 282
+exit
+INFO: [Common 17-206] Exiting xsim at Thu Oct 29 10:59:04 2026...

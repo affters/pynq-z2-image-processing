@@ -1,0 +1,20 @@
+{
+  "entry": 1048576,
+  "segments": [
+    {
+      "virtual_address": 1048576,
+      "physical_address": 1048576,
+      "file_bytes": 3827,
+      "memory_bytes": 3827,
+      "flags": 5
+    },
+    {
+      "virtual_address": 1052416,
+      "physical_address": 1052416,
+      "file_bytes": 0,
+      "memory_bytes": 49236,
+      "flags": 6
+    }
+  ],
+  "all_loads_in_reserved_firmware_ddr": true
+}

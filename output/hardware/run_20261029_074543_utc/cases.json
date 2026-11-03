@@ -1,0 +1,102 @@
+[
+  {
+    "name": "frame0_mode0",
+    "frame": 0,
+    "mode": 0,
+    "input_file": "input_frame0.bin",
+    "input_pixels": 12288,
+    "output_pixels": 12288,
+    "output_width": 128,
+    "output_height": 96
+  },
+  {
+    "name": "frame0_mode1",
+    "frame": 0,
+    "mode": 1,
+    "input_file": "input_frame0.bin",
+    "input_pixels": 12288,
+    "output_pixels": 11844,
+    "output_width": 126,
+    "output_height": 94
+  },
+  {
+    "name": "frame0_mode2",
+    "frame": 0,
+    "mode": 2,
+    "input_file": "input_frame0.bin",
+    "input_pixels": 12288,
+    "output_pixels": 11844,
+    "output_width": 126,
+    "output_height": 94
+  },
+  {
+    "name": "frame0_mode3",
+    "frame": 0,
+    "mode": 3,
+    "input_file": "input_frame0.bin",
+    "input_pixels": 12288,
+    "output_pixels": 11844,
+    "output_width": 126,
+    "output_height": 94
+  },
+  {
+    "name": "frame0_mode4",
+    "frame": 0,
+    "mode": 4,
+    "input_file": "input_frame0.bin",
+    "input_pixels": 12288,
+    "output_pixels": 12288,
+    "output_width": 128,
+    "output_height": 96
+  },
+  {
+    "name": "frame1_mode0",
+    "frame": 1,
+    "mode": 0,
+    "input_file": "input_frame1.bin",
+    "input_pixels": 12288,
+    "output_pixels": 12288,
+    "output_width": 128,
+    "output_height": 96
+  },
+  {
+    "name": "frame1_mode1",
+    "frame": 1,
+    "mode": 1,
+    "input_file": "input_frame1.bin",
+    "input_pixels": 12288,
+    "output_pixels": 11844,
+    "output_width": 126,
+    "output_height": 94
+  },
+  {
+    "name": "frame1_mode2",
+    "frame": 1,
+    "mode": 2,
+    "input_file": "input_frame1.bin",
+    "input_pixels": 12288,
+    "output_pixels": 11844,
+    "output_width": 126,
+    "output_height": 94
+  },
+  {
+    "name": "frame1_mode3",
+    "frame": 1,
+    "mode": 3,
+    "input_file": "input_frame1.bin",
+    "input_pixels": 12288,
+    "output_pixels": 11844,
+    "output_width": 126,
+    "output_height": 94
+  },
+  {
+    "name": "frame1_mode4",
+    "frame": 1,
+    "mode": 4,
+    "input_file": "input_frame1.bin",
+    "input_pixels": 12288,
+    "output_pixels": 12288,
+    "output_width": 128,
+    "output_height": 96
+  }
+]

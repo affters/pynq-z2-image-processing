@@ -1,0 +1,5 @@
+create_clock -name core_clk -period 10.000 [get_ports clk]
+set_input_delay -clock [get_clocks core_clk] -max 0.000 [get_ports -filter {DIRECTION == IN && NAME != clk}]
+set_input_delay -clock [get_clocks core_clk] -min 0.000 [get_ports -filter {DIRECTION == IN && NAME != clk}]
+set_output_delay -clock [get_clocks core_clk] -max 0.000 [all_outputs]
+set_output_delay -clock [get_clocks core_clk] -min 0.000 [all_outputs]

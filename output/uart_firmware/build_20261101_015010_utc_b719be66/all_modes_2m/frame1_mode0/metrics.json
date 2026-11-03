@@ -1,0 +1,25 @@
+{
+  "sequence": 2799557823,
+  "mode": 0,
+  "core_status": 2,
+  "response_crc32": 3743849332,
+  "uart_roundtrip_seconds": 0.30232959997374564,
+  "request_payload_bytes": 36864,
+  "response_payload_bytes": 12288,
+  "name": "frame1_mode0",
+  "frame": 1,
+  "mode_name": "gray",
+  "input_shape": [
+    96,
+    128,
+    3
+  ],
+  "output_shape": [
+    96,
+    128
+  ],
+  "exact_match": true,
+  "mismatch_pixels": 0,
+  "max_abs_error": 0,
+  "host_numpy_reference_seconds": 0.0002256000298075378
+}

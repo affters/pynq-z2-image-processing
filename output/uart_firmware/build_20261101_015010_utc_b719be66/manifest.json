@@ -1,0 +1,16 @@
+{
+  "built_utc": "2026-11-01T01:50:13.5995423Z",
+  "baudrate": 2000000,
+  "compiler": "Clang 7.0.1 ARM-none-eabi",
+  "linker": "LLD 7.0.1 GNU armelf",
+  "entry_expected": "0x00100000",
+  "elf_path": ".\\output\\uart_firmware\\build_20261101_015010_utc_b719be66\\uart_image.elf",
+  "elf_sha256": "F60D7DBDB7D0983E76ACD46ED0AA59D28410240864CF7678BD51DDA9FA788328",
+  "source_hashes": {
+    "start.S": "97ED66A44E8071BB469089D44FC13AB4F4B1EE9F3DABACD6DA2177F59B4A2EF5",
+    "main.c": "918F68B333CC2412CEE22BF083DDC54C3354EAF519ED7AB80CFE18A794FA32FA",
+    "link.ld": "9CA42B3AACB374917761E30A2C4469D4CC763B79163B477B2AB918E22D615245"
+  },
+  "hardware_test": false,
+  "note": "Compilation only; source baud behavior and real transport require board verification"
+}

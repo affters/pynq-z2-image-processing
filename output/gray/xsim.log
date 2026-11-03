@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Oct 29 10:26:19 2026
+# Process ID: 32092
+# Current directory: C:/Users/[user]/AppData/Local/Temp/codex_pfga_gray_5a9264347e664cebb9bf086b3f1dfd3d/vectors
+# Command line: xsim.exe -log xsim.log -mode tcl -source {xsim.dir/gray_sim/xsim_script.tcl}
+# Log file: C:/Users/[user]/AppData/Local/Temp/codex_pfga_gray_5a9264347e664cebb9bf086b3f1dfd3d/vectors/xsim.log
+# Journal file: C:/Users/[user]/AppData/Local/Temp/codex_pfga_gray_5a9264347e664cebb9bf086b3f1dfd3d/vectors\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/gray_sim/xsim_script.tcl
+# xsim {gray_sim} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+SIM_PASS rgb_to_gray count=14560
+$finish called at time : 289796 ns : File "C:/Users/[user]/AppData/Local/Temp/codex_pfga_gray_5a9264347e664cebb9bf086b3f1dfd3d/sim/tb_rgb_to_gray.sv" Line 229
+exit
+INFO: [Common 17-206] Exiting xsim at Thu Oct 29 10:26:25 2026...

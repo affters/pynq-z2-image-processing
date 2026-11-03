@@ -1,0 +1,21 @@
+{
+  "host_only": true,
+  "hardware_test": false,
+  "camera_test": false,
+  "checks": {
+    "zip_crc": true,
+    "exact_zip_payload": true,
+    "payload_sha256": true,
+    "python38_syntax": true,
+    "hwh_contract": true,
+    "windows_host_rejected": true,
+    "changed_bitstream_rejected": true,
+    "notebook_stale_success_cleared": true,
+    "existing_package_preserved": true
+  },
+  "payload_files": 11,
+  "notebook_code_cells": 4,
+  "zip_sha256": "b223ed835f892995cc79482bd63592d36b09bd0b0fb9f984bf38c4a84fff84c2",
+  "zip_size_bytes": 214001,
+  "all_passed": true
+}

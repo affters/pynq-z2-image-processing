@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Oct 29 14:08:02 2026
+# Process ID: 66980
+# Current directory: C:/Users/[user]/AppData/Local/Temp/codex_pfga_axis_128x96_6c12b0b6ddc5415b97127371d4774806/vectors
+# Command line: xsim.exe -log xsim.log -mode tcl -source {xsim.dir/axis_sim/xsim_script.tcl}
+# Log file: C:/Users/[user]/AppData/Local/Temp/codex_pfga_axis_128x96_6c12b0b6ddc5415b97127371d4774806/vectors/xsim.log
+# Journal file: C:/Users/[user]/AppData/Local/Temp/codex_pfga_axis_128x96_6c12b0b6ddc5415b97127371d4774806/vectors\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/axis_sim/xsim_script.tcl
+# xsim {axis_sim} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+SIM_PASS image_axis_core modes=5 frames=10
+$finish called at time : 2151406 ns : File "C:/Users/[user]/AppData/Local/Temp/codex_pfga_axis_128x96_6c12b0b6ddc5415b97127371d4774806/sim/tb_image_axis_core.sv" Line 334
+exit
+INFO: [Common 17-206] Exiting xsim at Thu Oct 29 14:08:08 2026...

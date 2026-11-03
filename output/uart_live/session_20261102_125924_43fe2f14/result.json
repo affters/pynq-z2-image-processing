@@ -1,0 +1,351 @@
+{
+  "started_utc": "2026-11-02T12:59:24.590999+00:00",
+  "port": "COM6",
+  "baudrate": 2000000,
+  "source": "live_mf200_camera",
+  "camera_capture_test": true,
+  "hardware_test": true,
+  "camera_test": true,
+  "linux_test": false,
+  "sd_used": false,
+  "cases": [
+    {
+      "sequence": 2041730790,
+      "mode": 4,
+      "core_status": 2,
+      "response_crc32": 494330465,
+      "uart_roundtrip_seconds": 0.3034163999982411,
+      "request_payload_bytes": 36864,
+      "response_payload_bytes": 12288,
+      "frame": 0,
+      "mode_name": "equalize",
+      "source_bgr_shape": [
+        480,
+        640,
+        3
+      ],
+      "input_rgb_shape": [
+        96,
+        128,
+        3
+      ],
+      "output_shape": [
+        96,
+        128
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0,
+      "verified_loop_frames_per_second": 2.9413685246326557
+    },
+    {
+      "sequence": 2041730791,
+      "mode": 4,
+      "core_status": 2,
+      "response_crc32": 786996204,
+      "uart_roundtrip_seconds": 0.30365549999987707,
+      "request_payload_bytes": 36864,
+      "response_payload_bytes": 12288,
+      "frame": 1,
+      "mode_name": "equalize",
+      "source_bgr_shape": [
+        480,
+        640,
+        3
+      ],
+      "input_rgb_shape": [
+        96,
+        128,
+        3
+      ],
+      "output_shape": [
+        96,
+        128
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0,
+      "verified_loop_frames_per_second": 2.9826835830608793
+    },
+    {
+      "sequence": 2041730792,
+      "mode": 4,
+      "core_status": 2,
+      "response_crc32": 1069491356,
+      "uart_roundtrip_seconds": 0.30296060000546277,
+      "request_payload_bytes": 36864,
+      "response_payload_bytes": 12288,
+      "frame": 2,
+      "mode_name": "equalize",
+      "source_bgr_shape": [
+        480,
+        640,
+        3
+      ],
+      "input_rgb_shape": [
+        96,
+        128,
+        3
+      ],
+      "output_shape": [
+        96,
+        128
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0,
+      "verified_loop_frames_per_second": 3.055056082169037
+    },
+    {
+      "sequence": 2041730793,
+      "mode": 4,
+      "core_status": 2,
+      "response_crc32": 1252515290,
+      "uart_roundtrip_seconds": 0.3034525999973994,
+      "request_payload_bytes": 36864,
+      "response_payload_bytes": 12288,
+      "frame": 3,
+      "mode_name": "equalize",
+      "source_bgr_shape": [
+        480,
+        640,
+        3
+      ],
+      "input_rgb_shape": [
+        96,
+        128,
+        3
+      ],
+      "output_shape": [
+        96,
+        128
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0,
+      "verified_loop_frames_per_second": 3.045033842884294
+    },
+    {
+      "sequence": 2041730794,
+      "mode": 4,
+      "core_status": 2,
+      "response_crc32": 621246655,
+      "uart_roundtrip_seconds": 0.30198960000416264,
+      "request_payload_bytes": 36864,
+      "response_payload_bytes": 12288,
+      "frame": 4,
+      "mode_name": "equalize",
+      "source_bgr_shape": [
+        480,
+        640,
+        3
+      ],
+      "input_rgb_shape": [
+        96,
+        128,
+        3
+      ],
+      "output_shape": [
+        96,
+        128
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0,
+      "verified_loop_frames_per_second": 3.080057722756097
+    },
+    {
+      "sequence": 2041730795,
+      "mode": 4,
+      "core_status": 2,
+      "response_crc32": 4053440041,
+      "uart_roundtrip_seconds": 0.30346349999308586,
+      "request_payload_bytes": 36864,
+      "response_payload_bytes": 12288,
+      "frame": 5,
+      "mode_name": "equalize",
+      "source_bgr_shape": [
+        480,
+        640,
+        3
+      ],
+      "input_rgb_shape": [
+        96,
+        128,
+        3
+      ],
+      "output_shape": [
+        96,
+        128
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0,
+      "verified_loop_frames_per_second": 3.099667963578926
+    },
+    {
+      "sequence": 2041730796,
+      "mode": 4,
+      "core_status": 2,
+      "response_crc32": 1709895989,
+      "uart_roundtrip_seconds": 0.3027580000052694,
+      "request_payload_bytes": 36864,
+      "response_payload_bytes": 12288,
+      "frame": 6,
+      "mode_name": "equalize",
+      "source_bgr_shape": [
+        480,
+        640,
+        3
+      ],
+      "input_rgb_shape": [
+        96,
+        128,
+        3
+      ],
+      "output_shape": [
+        96,
+        128
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0,
+      "verified_loop_frames_per_second": 3.09091807465006
+    },
+    {
+      "sequence": 2041730797,
+      "mode": 4,
+      "core_status": 2,
+      "response_crc32": 3174326190,
+      "uart_roundtrip_seconds": 0.30382850000751205,
+      "request_payload_bytes": 36864,
+      "response_payload_bytes": 12288,
+      "frame": 7,
+      "mode_name": "equalize",
+      "source_bgr_shape": [
+        480,
+        640,
+        3
+      ],
+      "input_rgb_shape": [
+        96,
+        128,
+        3
+      ],
+      "output_shape": [
+        96,
+        128
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0,
+      "verified_loop_frames_per_second": 3.082957016686837
+    },
+    {
+      "sequence": 2041730798,
+      "mode": 4,
+      "core_status": 2,
+      "response_crc32": 1051702664,
+      "uart_roundtrip_seconds": 0.30343939999875147,
+      "request_payload_bytes": 36864,
+      "response_payload_bytes": 12288,
+      "frame": 8,
+      "mode_name": "equalize",
+      "source_bgr_shape": [
+        480,
+        640,
+        3
+      ],
+      "input_rgb_shape": [
+        96,
+        128,
+        3
+      ],
+      "output_shape": [
+        96,
+        128
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0,
+      "verified_loop_frames_per_second": 3.0968010458132467
+    },
+    {
+      "sequence": 2041730799,
+      "mode": 4,
+      "core_status": 2,
+      "response_crc32": 3879697609,
+      "uart_roundtrip_seconds": 0.3031373999983771,
+      "request_payload_bytes": 36864,
+      "response_payload_bytes": 12288,
+      "frame": 9,
+      "mode_name": "equalize",
+      "source_bgr_shape": [
+        480,
+        640,
+        3
+      ],
+      "input_rgb_shape": [
+        96,
+        128,
+        3
+      ],
+      "output_shape": [
+        96,
+        128
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0,
+      "verified_loop_frames_per_second": 3.107618700155164
+    }
+  ],
+  "cleanup_errors": [],
+  "error": null,
+  "verified_modes": [
+    4
+  ],
+  "all_modes_verified": false,
+  "max_frames": 10,
+  "frame_limit_reached": true,
+  "timing_note": "UART roundtrip includes transfer and board processing. Verified display throughput includes capture, CPU reference, UART and saving; it is not PL latency.",
+  "firmware_info": "pynq_uart_image_v1",
+  "camera": {
+    "selected": {
+      "index": 0,
+      "name": "MF200 Camera",
+      "vid": "0c45",
+      "pid": "6366"
+    },
+    "inventory": [
+      {
+        "index": 0,
+        "name": "MF200 Camera",
+        "vid": "0c45",
+        "pid": "6366"
+      },
+      {
+        "index": 1,
+        "name": "HD Webcam",
+        "vid": "04f2",
+        "pid": "b78a"
+      }
+    ],
+    "unique_device_paths_omitted": true,
+    "backend": "DSHOW",
+    "warmup_frames": 20,
+    "source_bgr_shape": [
+      480,
+      640,
+      3
+    ],
+    "processed_rgb_shape": [
+      96,
+      128,
+      3
+    ],
+    "resize": "OpenCV INTER_AREA",
+    "conversion": "BGR to RGB"
+  },
+  "completed_utc": "2026-11-02T12:59:33.691690+00:00"
+}

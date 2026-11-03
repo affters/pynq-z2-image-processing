@@ -1,0 +1,283 @@
+{
+  "started_utc": "2026-11-01T01:58:58.532061+00:00",
+  "source": "fixed_rgb_fixtures",
+  "port": "COM6",
+  "baudrate": 2000000,
+  "timeout_seconds": 20.0,
+  "info_handshake_passed": true,
+  "hardware_test_attempted": true,
+  "hardware_test": true,
+  "actual_fpga_frames_verified": 10,
+  "camera_test": false,
+  "linux_test": false,
+  "planned_frames": 10,
+  "all_requested_frames_passed": true,
+  "requested_action_passed": true,
+  "cases": [
+    {
+      "sequence": 2799557818,
+      "mode": 0,
+      "core_status": 2,
+      "response_crc32": 1760537015,
+      "uart_roundtrip_seconds": 0.3029705000226386,
+      "request_payload_bytes": 36864,
+      "response_payload_bytes": 12288,
+      "name": "frame0_mode0",
+      "frame": 0,
+      "mode_name": "gray",
+      "input_shape": [
+        96,
+        128,
+        3
+      ],
+      "output_shape": [
+        96,
+        128
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0,
+      "host_numpy_reference_seconds": 0.00018810003530234098
+    },
+    {
+      "sequence": 2799557819,
+      "mode": 1,
+      "core_status": 2,
+      "response_crc32": 3398961746,
+      "uart_roundtrip_seconds": 0.3004419999779202,
+      "request_payload_bytes": 36864,
+      "response_payload_bytes": 11844,
+      "name": "frame0_mode1",
+      "frame": 0,
+      "mode_name": "gaussian",
+      "input_shape": [
+        96,
+        128,
+        3
+      ],
+      "output_shape": [
+        94,
+        126
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0,
+      "host_numpy_reference_seconds": 0.0006439999560825527
+    },
+    {
+      "sequence": 2799557820,
+      "mode": 2,
+      "core_status": 2,
+      "response_crc32": 255883013,
+      "uart_roundtrip_seconds": 0.3000729000195861,
+      "request_payload_bytes": 36864,
+      "response_payload_bytes": 11844,
+      "name": "frame0_mode2",
+      "frame": 0,
+      "mode_name": "sobel",
+      "input_shape": [
+        96,
+        128,
+        3
+      ],
+      "output_shape": [
+        94,
+        126
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0,
+      "host_numpy_reference_seconds": 0.000839899992570281
+    },
+    {
+      "sequence": 2799557821,
+      "mode": 3,
+      "core_status": 2,
+      "response_crc32": 3937177723,
+      "uart_roundtrip_seconds": 0.29973480000626296,
+      "request_payload_bytes": 36864,
+      "response_payload_bytes": 11844,
+      "name": "frame0_mode3",
+      "frame": 0,
+      "mode_name": "sharpen",
+      "input_shape": [
+        96,
+        128,
+        3
+      ],
+      "output_shape": [
+        94,
+        126
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0,
+      "host_numpy_reference_seconds": 0.0001618000096641481
+    },
+    {
+      "sequence": 2799557822,
+      "mode": 4,
+      "core_status": 2,
+      "response_crc32": 1848929996,
+      "uart_roundtrip_seconds": 0.3039001999422908,
+      "request_payload_bytes": 36864,
+      "response_payload_bytes": 12288,
+      "name": "frame0_mode4",
+      "frame": 0,
+      "mode_name": "equalize",
+      "input_shape": [
+        96,
+        128,
+        3
+      ],
+      "output_shape": [
+        96,
+        128
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0,
+      "host_numpy_reference_seconds": 0.0017047000001184642
+    },
+    {
+      "sequence": 2799557823,
+      "mode": 0,
+      "core_status": 2,
+      "response_crc32": 3743849332,
+      "uart_roundtrip_seconds": 0.30232959997374564,
+      "request_payload_bytes": 36864,
+      "response_payload_bytes": 12288,
+      "name": "frame1_mode0",
+      "frame": 1,
+      "mode_name": "gray",
+      "input_shape": [
+        96,
+        128,
+        3
+      ],
+      "output_shape": [
+        96,
+        128
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0,
+      "host_numpy_reference_seconds": 0.0002256000298075378
+    },
+    {
+      "sequence": 2799557824,
+      "mode": 1,
+      "core_status": 2,
+      "response_crc32": 1876368142,
+      "uart_roundtrip_seconds": 0.2994874999858439,
+      "request_payload_bytes": 36864,
+      "response_payload_bytes": 11844,
+      "name": "frame1_mode1",
+      "frame": 1,
+      "mode_name": "gaussian",
+      "input_shape": [
+        96,
+        128,
+        3
+      ],
+      "output_shape": [
+        94,
+        126
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0,
+      "host_numpy_reference_seconds": 0.00021840003319084644
+    },
+    {
+      "sequence": 2799557825,
+      "mode": 2,
+      "core_status": 2,
+      "response_crc32": 4068675038,
+      "uart_roundtrip_seconds": 0.29965429997537285,
+      "request_payload_bytes": 36864,
+      "response_payload_bytes": 11844,
+      "name": "frame1_mode2",
+      "frame": 1,
+      "mode_name": "sobel",
+      "input_shape": [
+        96,
+        128,
+        3
+      ],
+      "output_shape": [
+        94,
+        126
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0,
+      "host_numpy_reference_seconds": 0.0002780999639071524
+    },
+    {
+      "sequence": 2799557826,
+      "mode": 3,
+      "core_status": 2,
+      "response_crc32": 1876368142,
+      "uart_roundtrip_seconds": 0.2995291999541223,
+      "request_payload_bytes": 36864,
+      "response_payload_bytes": 11844,
+      "name": "frame1_mode3",
+      "frame": 1,
+      "mode_name": "sharpen",
+      "input_shape": [
+        96,
+        128,
+        3
+      ],
+      "output_shape": [
+        94,
+        126
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0,
+      "host_numpy_reference_seconds": 0.0001601999974809587
+    },
+    {
+      "sequence": 2799557827,
+      "mode": 4,
+      "core_status": 2,
+      "response_crc32": 3743849332,
+      "uart_roundtrip_seconds": 0.3036230999859981,
+      "request_payload_bytes": 36864,
+      "response_payload_bytes": 12288,
+      "name": "frame1_mode4",
+      "frame": 1,
+      "mode_name": "equalize",
+      "input_shape": [
+        96,
+        128,
+        3
+      ],
+      "output_shape": [
+        96,
+        128
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0,
+      "host_numpy_reference_seconds": 0.00016200001118704677
+    }
+  ],
+  "inputs": [
+    {
+      "path": ".\\output\\hardware\\run_20261029_074543_utc\\input_frame0.bin",
+      "sha256": "93f4cf597146e36be61cb30905e394167e81272fb718bc63b3321661ea4fedcb"
+    },
+    {
+      "path": ".\\output\\hardware\\run_20261029_074543_utc\\input_frame1.bin",
+      "sha256": "18069561e509d796f10e2681130b5d63a82fa5800f6d68db6d4fbfd7fc753be6"
+    }
+  ],
+  "error": null,
+  "timing_note": "uart_roundtrip includes UART transfer, ARM control and FPGA work; excludes host RGB packing/reference/display. It is not PL latency or video FPS.",
+  "firmware_info": "pynq_uart_image_v1",
+  "info_roundtrip_seconds": 0.014602000010199845,
+  "completed_utc": "2026-11-01T01:59:01.798539+00:00"
+}

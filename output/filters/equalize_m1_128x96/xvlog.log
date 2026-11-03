@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/[user]/AppData/Local/Temp/codex_pfga_equalize_m1_128x96_b8060aa569a642048676de16ef4dc4dc/rtl/frame_equalize.v" into library work
+INFO: [VRFC 10-311] analyzing module frame_equalize
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/[user]/AppData/Local/Temp/codex_pfga_equalize_m1_128x96_b8060aa569a642048676de16ef4dc4dc/sim/tb_frame_equalize.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_frame_equalize
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/[user]/AppData/Local/Temp/codex_pfga_equalize_m1_128x96_b8060aa569a642048676de16ef4dc4dc/sim/tb_image_case.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_image_case

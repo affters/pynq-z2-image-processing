@@ -1,0 +1,64 @@
+{
+  "hardware_test": false,
+  "test_method": "host-only fault injection; no PYNQ imports, MMIO, or physical buffers",
+  "source_sha256": {
+    "software\\image_accelerator.py": "a5094b8b4e6d170837229b7aa271cbbd121fdb605f181548262ad634de3a0f49",
+    "software\\live_notebook.py": "ff74899dd75491485f86738aaa3fad3caade8f3080319a03989f6b151262eb19"
+  },
+  "passed": true,
+  "cases": [
+    {
+      "case": "driver_healthy",
+      "passed": true,
+      "buffers_freed": 3,
+      "retained_across_gc": false,
+      "successful_retry": false
+    },
+    {
+      "case": "driver_reset_stuck",
+      "passed": true,
+      "buffers_freed": 3,
+      "retained_across_gc": true,
+      "successful_retry": true
+    },
+    {
+      "case": "driver_tx_not_halted",
+      "passed": true,
+      "buffers_freed": 3,
+      "retained_across_gc": true,
+      "successful_retry": true
+    },
+    {
+      "case": "driver_rx_not_halted",
+      "passed": true,
+      "buffers_freed": 3,
+      "retained_across_gc": true,
+      "successful_retry": true
+    },
+    {
+      "case": "notebook_normal_stop",
+      "passed": true,
+      "cleanup_precedes_stopped": true,
+      "restart_disabled": false
+    },
+    {
+      "case": "notebook_frame_failure",
+      "passed": true,
+      "cleanup_precedes_stopped": true,
+      "restart_disabled": false
+    },
+    {
+      "case": "notebook_dma_close_failure",
+      "passed": true,
+      "cleanup_precedes_stopped": true,
+      "restart_disabled": true
+    },
+    {
+      "case": "notebook_camera_release_failure",
+      "passed": true,
+      "cleanup_precedes_stopped": true,
+      "restart_disabled": true
+    }
+  ],
+  "limitation": "Checks Python ownership and UI cleanup ordering, not actual PYNQ DMA/reset hardware behavior"
+}

@@ -1,0 +1,21 @@
+{
+  "started_utc": "2026-11-02T09:09:56.133874+00:00",
+  "source": "info_only",
+  "port": "COM6",
+  "baudrate": 2000000,
+  "timeout_seconds": 5.0,
+  "info_handshake_passed": false,
+  "hardware_test_attempted": true,
+  "hardware_test": false,
+  "actual_fpga_frames_verified": 0,
+  "camera_test": false,
+  "linux_test": false,
+  "planned_frames": 0,
+  "all_requested_frames_passed": null,
+  "requested_action_passed": false,
+  "cases": [],
+  "inputs": [],
+  "error": "TimeoutError: UART transaction deadline expired",
+  "timing_note": "uart_roundtrip includes UART transfer, ARM control and FPGA work; excludes host RGB packing/reference/display. It is not PL latency or video FPS.",
+  "completed_utc": "2026-11-02T09:10:01.289619+00:00"
+}

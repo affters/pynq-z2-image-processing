@@ -1,0 +1,31 @@
+{
+  "sequence": 3293871019,
+  "mode": 3,
+  "core_status": 2,
+  "response_crc32": 1103979699,
+  "uart_roundtrip_seconds": 0.299448100005975,
+  "request_payload_bytes": 36864,
+  "response_payload_bytes": 11844,
+  "capture_resize_seconds": 0.000444200006313622,
+  "host_numpy_reference_seconds": 0.00040869999793358147,
+  "input_rgb_sha256": "cfb498ae4d145f2771a855b25a4264422121b6c47915eed15bd64662de1bbd6a",
+  "frame": 1,
+  "mode_name": "sharpen",
+  "source_bgr_shape": [
+    480,
+    640,
+    3
+  ],
+  "input_rgb_shape": [
+    96,
+    128,
+    3
+  ],
+  "output_shape": [
+    94,
+    126
+  ],
+  "exact_match": true,
+  "mismatch_pixels": 0,
+  "max_abs_error": 0
+}

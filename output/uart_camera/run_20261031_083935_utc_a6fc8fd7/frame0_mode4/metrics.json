@@ -1,0 +1,31 @@
+{
+  "sequence": 1939165693,
+  "mode": 4,
+  "core_status": 2,
+  "response_crc32": 2803459609,
+  "uart_roundtrip_seconds": 4.322465799981728,
+  "request_payload_bytes": 36864,
+  "response_payload_bytes": 12288,
+  "capture_resize_seconds": 0.0005219999584369361,
+  "host_numpy_reference_seconds": 0.00047740002628415823,
+  "input_rgb_sha256": "3cd0d7bb88386c1a352dff386486e688d6499a2e9ba0060137a8545fae041762",
+  "frame": 0,
+  "mode_name": "equalize",
+  "source_bgr_shape": [
+    480,
+    640,
+    3
+  ],
+  "input_rgb_shape": [
+    96,
+    128,
+    3
+  ],
+  "output_shape": [
+    96,
+    128
+  ],
+  "exact_match": true,
+  "mismatch_pixels": 0,
+  "max_abs_error": 0
+}

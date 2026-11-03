@@ -1,0 +1,72 @@
+{
+  "hardware_test": true,
+  "run_id": "00d8ad2e8fad4c359f20608d116923b8",
+  "transport": "JTAG debug -> DDR -> AXI DMA -> PL -> AXI DMA -> DDR -> JTAG debug",
+  "cases": [
+    {
+      "name": "frame0_mode0",
+      "pixels": 12288,
+      "exact_match": true,
+      "actual_sha256": "15a9923de1a810a10655272fe0b4b1af3aa9c09b8a31a481cf0c1e98e272f451"
+    },
+    {
+      "name": "frame0_mode1",
+      "pixels": 11844,
+      "exact_match": true,
+      "actual_sha256": "23ea8c00ae24c150ef381273e4fcb9a1477c32bd383b2f0a030bf6e33f0716f0"
+    },
+    {
+      "name": "frame0_mode2",
+      "pixels": 11844,
+      "exact_match": true,
+      "actual_sha256": "bfdc4afb798a0e9424a31c096d4be770f630fe2e03a148958953c4e606ddaa52"
+    },
+    {
+      "name": "frame0_mode3",
+      "pixels": 11844,
+      "exact_match": true,
+      "actual_sha256": "ced07683da1a6151dd434927160c0f43de39a7a1588789cbb9ecc94bd50dd364"
+    },
+    {
+      "name": "frame0_mode4",
+      "pixels": 12288,
+      "exact_match": true,
+      "actual_sha256": "75c1b7c3c6dab7597f8e62e94ff1ac4d0fd825be7f2b4f3ee6e3bcfa7ff46c11"
+    },
+    {
+      "name": "frame1_mode0",
+      "pixels": 12288,
+      "exact_match": true,
+      "actual_sha256": "f543413a64cd2366b0368b3aa52a15279502e6c412617bbf516c002b635936f9"
+    },
+    {
+      "name": "frame1_mode1",
+      "pixels": 11844,
+      "exact_match": true,
+      "actual_sha256": "e6f08ee2463a8946b84cf29b1b2a2365774fc4c31af27fc99d4c9be65d58225b"
+    },
+    {
+      "name": "frame1_mode2",
+      "pixels": 11844,
+      "exact_match": true,
+      "actual_sha256": "bdead3743114696e4fcbefcdd2c39e15b28fbdda0a2edb2139133a20546b309e"
+    },
+    {
+      "name": "frame1_mode3",
+      "pixels": 11844,
+      "exact_match": true,
+      "actual_sha256": "e6f08ee2463a8946b84cf29b1b2a2365774fc4c31af27fc99d4c9be65d58225b"
+    },
+    {
+      "name": "frame1_mode4",
+      "pixels": 12288,
+      "exact_match": true,
+      "actual_sha256": "f543413a64cd2366b0368b3aa52a15279502e6c412617bbf516c002b635936f9"
+    }
+  ],
+  "total_compared_pixels": 120216,
+  "exact_match": true,
+  "camera_test": false,
+  "linux_test": false,
+  "timing_note": "JTAG/host polling is not an FPS or PL-latency measurement"
+}

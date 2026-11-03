@@ -1,0 +1,88 @@
+{
+  "gui_samples": [
+    {
+      "session": "session_20261101_020150_fddafc3e",
+      "frame": 0,
+      "mode": 0,
+      "directory": "output/uart_live/session_20261101_020150_fddafc3e/frame000000_mode0"
+    },
+    {
+      "session": "session_20261101_020150_fddafc3e",
+      "frame": 306,
+      "mode": 1,
+      "directory": "output/uart_live/session_20261101_020150_fddafc3e/frame000306_mode1"
+    },
+    {
+      "session": "session_20261101_020150_fddafc3e",
+      "frame": 621,
+      "mode": 2,
+      "directory": "output/uart_live/session_20261101_020150_fddafc3e/frame000621_mode2"
+    },
+    {
+      "session": "session_20261101_020150_fddafc3e",
+      "frame": 935,
+      "mode": 3,
+      "directory": "output/uart_live/session_20261101_020150_fddafc3e/frame000935_mode3"
+    },
+    {
+      "session": "session_20261101_020150_fddafc3e",
+      "frame": 1361,
+      "mode": 4,
+      "directory": "output/uart_live/session_20261101_020150_fddafc3e/frame001361_mode4"
+    },
+    {
+      "session": "session_20261101_021530_75398c2c",
+      "frame": 0,
+      "mode": 4,
+      "directory": "output/uart_live/session_20261101_021530_75398c2c/frame000000_mode4"
+    },
+    {
+      "session": "session_20261102_101032_950a05f0",
+      "frame": 0,
+      "mode": 0,
+      "directory": "output/uart_live/session_20261102_101032_950a05f0/frame000000_mode0"
+    },
+    {
+      "session": "session_20261102_101032_950a05f0",
+      "frame": 884,
+      "mode": 1,
+      "directory": "output/uart_live/session_20261102_101032_950a05f0/frame000884_mode1"
+    },
+    {
+      "session": "session_20261102_111935_29c421e6",
+      "frame": 0,
+      "mode": 2,
+      "directory": "output/uart_live/session_20261102_111935_29c421e6/frame000000_mode2"
+    },
+    {
+      "session": "session_20261102_111935_29c421e6",
+      "frame": 392,
+      "mode": 3,
+      "directory": "output/uart_live/session_20261102_111935_29c421e6/frame000392_mode3"
+    },
+    {
+      "session": "session_20261102_111935_29c421e6",
+      "frame": 603,
+      "mode": 4,
+      "directory": "output/uart_live/session_20261102_111935_29c421e6/frame000603_mode4"
+    },
+    {
+      "session": "session_20261102_125924_43fe2f14",
+      "frame": 0,
+      "mode": 4,
+      "directory": "output/uart_live/session_20261102_125924_43fe2f14/frame000000_mode4"
+    }
+  ],
+  "complete_gui_pixel_archive_included": false,
+  "complete_gui_summary_cases_included": true,
+  "fixed_and_camera_batches_complete": true,
+  "hardware_access_in_packaging": false,
+  "bounded_gui_capture": {
+    "session": "session_20261102_125924_43fe2f14",
+    "screenshot_path": "output/report_assets/20261102/gui_limited_stopped.jpg",
+    "screenshot_sha256": "f96aecfc3a0118398097d5d50a1b3c2fb4c52b6dcc58ed450b34ad9a92eb6d33",
+    "unmodified_real_gui_screenshot": true,
+    "visual_anonymity_review": "root-approved before packaging"
+  },
+  "excluded_private_screenshot": "output/uart_live/session_20261102_111935_29c421e6/gui_stopped_original.jpg"
+}
