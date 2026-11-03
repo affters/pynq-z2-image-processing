@@ -1,0 +1,13 @@
+status=IMPLEMENTED_NOT_PROGRAMMED
+part=xc7z020clg400-1
+fabric_clock_hz=50000000
+setup_slack_ns=2.962
+hold_slack_ns=0.037
+drc_errors=0
+ext_reset_active_high=0
+aux_reset_active_high=1 aux_tied_low=1
+image_width=256
+image_height=192
+gpio_address=0x41200000 control_offset=0x00 status_offset=0x08
+dma_address=0x40400000 mode=simple stream_bits=32 memory_bits=32 length_bits=23
+ps7_preset=Xilinx/PYNQ@v2.7.0:dd415eac9a19aeb5ec9341718c47a68f76204544

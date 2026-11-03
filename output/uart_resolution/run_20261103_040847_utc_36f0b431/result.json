@@ -1,0 +1,77 @@
+{
+  "started_utc": "2026-11-03T04:08:47.547775+00:00",
+  "source": "fixed_rgb",
+  "width": 256,
+  "height": 192,
+  "port": "COM6",
+  "baudrate": 2000000,
+  "timeout_seconds": 15.0,
+  "hardware_access_attempted": true,
+  "hardware_test_attempted": true,
+  "info_handshake_passed": true,
+  "hardware_test": true,
+  "camera_capture_test": false,
+  "camera_test": false,
+  "linux_test": false,
+  "sd_used": false,
+  "planned_frames": 1,
+  "planned_output_pixels": 49152,
+  "actual_output_pixels": 49152,
+  "actual_fpga_frames_verified": 1,
+  "inputs": [
+    {
+      "frame": 0,
+      "input_rgb_shape": [
+        192,
+        256,
+        3
+      ],
+      "source_bgr_shape": null,
+      "input_rgb_sha256": "1e5645f2294223ed935112a6ca2a5e71c711f9fa955543890d995866b1c5fa0d",
+      "input_rgb_bytes": 147456,
+      "png": "inputs/frame0.png",
+      "npy": "inputs/frame0.npy",
+      "rgb": "inputs/frame0.rgb"
+    }
+  ],
+  "cases": [
+    {
+      "sequence": 15208736,
+      "mode": 0,
+      "core_status": 2,
+      "response_crc32": 2410505991,
+      "uart_roundtrip_seconds": 1.1678214999847114,
+      "request_payload_bytes": 147456,
+      "response_payload_bytes": 49152,
+      "input_rgb_sha256": "1e5645f2294223ed935112a6ca2a5e71c711f9fa955543890d995866b1c5fa0d",
+      "host_references_seconds": 0.03267950000008568,
+      "independent_scalar_reference_match": true,
+      "capture_resize_seconds": 0.021150599990505725,
+      "input_width": 256,
+      "input_height": 192,
+      "frame": 0,
+      "mode_name": "gray",
+      "source_bgr_shape": null,
+      "input_rgb_shape": [
+        192,
+        256,
+        3
+      ],
+      "output_shape": [
+        192,
+        256
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0
+    }
+  ],
+  "all_requested_frames_passed": true,
+  "requested_action_passed": true,
+  "error": null,
+  "cleanup_errors": [],
+  "timing_note": "UART roundtrip includes transport and ARM/DMA/PL work; excludes capture, references and saving. It is not PL latency or displayed FPS.",
+  "firmware_info": "pynq_uart_image_256x192_v1",
+  "info_roundtrip_seconds": 0.015151700004935265,
+  "completed_utc": "2026-11-03T04:08:48.936253+00:00"
+}

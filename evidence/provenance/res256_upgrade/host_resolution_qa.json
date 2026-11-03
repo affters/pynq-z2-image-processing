@@ -1,0 +1,244 @@
+{
+  "status": "offline_profile_acceptance_passed_not_board_tested",
+  "checked_date_local": "2026-11-03",
+  "hardware_access": false,
+  "camera_opened": false,
+  "gui_window_created": false,
+  "frozen_v5_and_remote_modified": false,
+  "default_profile": [
+    128,
+    96
+  ],
+  "additional_profile": [
+    256,
+    192
+  ],
+  "default_firmware_identity": "pynq_uart_image_v1",
+  "additional_firmware_identity": "pynq_uart_image_256x192_v1",
+  "profile_256_full_output_pixels": 49152,
+  "profile_256_inner_output_pixels": 48260,
+  "two_frames_five_modes_output_pixels": 486168,
+  "source_before_manifest": "evidence/provenance/res256_upgrade/source_before_host/manifest.json",
+  "source_after": [
+    {
+      "path": "software/uart_image_client.py",
+      "sha256": "4f9121e3e96882ddd24064efda48c8bbe8615b1b39410db06600da1614c69087",
+      "bytes": 11949
+    },
+    {
+      "path": "software/uart_camera_demo.py",
+      "sha256": "0d57459207996e78e96e474e2fbe8f72b77a65e127c7fb83df55c6cea337fd5d",
+      "bytes": 12500
+    },
+    {
+      "path": "software/uart_live_demo.py",
+      "sha256": "9b54bcec609a4977e141e1e4e8cbf2ffcb634cbd3f9a18226a09aed4038838b4",
+      "bytes": 18152
+    },
+    {
+      "path": "scripts/check_uart_live_limits.py",
+      "sha256": "7725941193311bc5c62ddd113baf90ddd1ffa9289505c4508aba04b1049444ed",
+      "bytes": 6989
+    },
+    {
+      "path": "scripts/check_uart_resolution_profiles.py",
+      "sha256": "e29d66e4f99e6f95ff79feb75bb343f0bf734a48bd124e6ac23a49413884e4c9",
+      "bytes": 12127
+    },
+    {
+      "path": "scripts/test_uart_resolution.py",
+      "sha256": "cb747b6ebca0c4658efd5c11e932342f357d26d5776dc1f26d2de81e66fb18da",
+      "bytes": 12114
+    }
+  ],
+  "checks": [
+    {
+      "name": "check_uart_host_protocol",
+      "path": "evidence/provenance/res256_upgrade/check_uart_host_protocol.stdout.json",
+      "sha256": "43acddd41d38cb0a31851095a394106a55f15d26762735f4df69cb864c85e834",
+      "result": {
+        "hardware_test": false,
+        "camera_test": false,
+        "serial_port_opened": false,
+        "tests": [
+          {
+            "name": "partial_reads_and_writes_valid_response",
+            "passed": true
+          },
+          {
+            "name": "crc_corruption",
+            "passed": true,
+            "closed_after_failure": true
+          },
+          {
+            "name": "stale_sequence",
+            "passed": true,
+            "closed_after_failure": true
+          },
+          {
+            "name": "oversized_payload",
+            "passed": true,
+            "closed_after_failure": true
+          },
+          {
+            "name": "wrong_shape",
+            "passed": true,
+            "closed_after_failure": true
+          },
+          {
+            "name": "core_busy_despite_success",
+            "passed": true,
+            "closed_after_failure": true
+          },
+          {
+            "name": "explicit_device_error",
+            "passed": true,
+            "closed_after_failure": true
+          },
+          {
+            "name": "invalid_nonempty_error",
+            "passed": true,
+            "closed_after_failure": true
+          },
+          {
+            "name": "truncated_body",
+            "passed": true,
+            "closed_after_failure": true
+          }
+        ],
+        "all_passed": true
+      }
+    },
+    {
+      "name": "check_uart_live_limits",
+      "path": "evidence/provenance/res256_upgrade/check_uart_live_limits.stdout.json",
+      "sha256": "3ce8be284307f056830578b147ca0eee751b3a2a83d02f22406b0c28262a3513",
+      "result": {
+        "all_passed": true,
+        "hardware_access": false,
+        "gui_window_created": false,
+        "cases": [
+          {
+            "case": "frame_limit",
+            "frames": 3,
+            "passed": true
+          },
+          {
+            "case": "early_stop",
+            "frames": 1,
+            "passed": true
+          },
+          {
+            "case": "continuous_default",
+            "frames": 2,
+            "passed": true
+          },
+          {
+            "case": "mismatch",
+            "frames": 1,
+            "passed": true
+          },
+          {
+            "case": "cleanup_gate",
+            "frames": 1,
+            "passed": true
+          },
+          {
+            "case": "path_display",
+            "passed": true
+          },
+          {
+            "case": "frame_limit_argument",
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "name": "check_camera_preview_contract",
+      "path": "evidence/provenance/res256_upgrade/check_camera_preview_contract.stdout.json",
+      "sha256": "9858efb43828dcf33df0e983f257dddea9e9b384509dddbd5cc5bda25d59cb2b",
+      "result": {
+        "passed": true,
+        "hardware_access": false,
+        "gui_window_created": false,
+        "source_fixtures": 3,
+        "fixed_rgb_matches_independent_resize": true,
+        "legacy_snapshot_compared": true,
+        "legacy_fixed_rgb_byte_identical": true,
+        "one_capture_read_per_call": true,
+        "source_rgb_channel_order": "RGB",
+        "preview_aspect_and_toggle_passed": true,
+        "hardware_output_display_unchanged": true
+      }
+    },
+    {
+      "name": "check_uart_resolution_profiles",
+      "path": "evidence/provenance/res256_upgrade/check_uart_resolution_profiles.stdout.json",
+      "sha256": "1942afdb16fb2374f60a0c7239cb6bb0a13ada56bf0825bd91404a53950909ac",
+      "result": {
+        "all_passed": true,
+        "hardware_access": false,
+        "gui_window_created": false,
+        "checks": [
+          {
+            "name": "128x96_five_modes_transport_capture_and_dual_reference",
+            "passed": true
+          },
+          {
+            "name": "256x192_five_modes_transport_capture_and_dual_reference",
+            "passed": true
+          },
+          {
+            "name": "reject_128x96_host_on_256x192_device",
+            "passed": true
+          },
+          {
+            "name": "reject_256x192_host_on_128x96_device",
+            "passed": true
+          },
+          {
+            "name": "reject_256_identity",
+            "passed": true
+          },
+          {
+            "name": "reject_256_shape",
+            "passed": true
+          },
+          {
+            "name": "reject_256_oversize",
+            "passed": true
+          },
+          {
+            "name": "reject_256_crc",
+            "passed": true
+          },
+          {
+            "name": "reject_input_shape_and_unsupported_profiles_before_io",
+            "passed": true
+          },
+          {
+            "name": "256_renderer_true_geometry_and_2x_display",
+            "passed": true
+          },
+          {
+            "name": "batch_fixed_summary_and_cleanup",
+            "passed": true
+          },
+          {
+            "name": "batch_info_summary_and_cleanup",
+            "passed": true
+          },
+          {
+            "name": "batch_crc_fail_summary_and_cleanup",
+            "passed": true
+          },
+          {
+            "name": "batch_cleanup_fail_summary_and_cleanup",
+            "passed": true
+          }
+        ]
+      }
+    }
+  ]
+}

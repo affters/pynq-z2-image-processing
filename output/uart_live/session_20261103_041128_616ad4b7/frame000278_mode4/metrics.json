@@ -1,0 +1,28 @@
+{
+  "sequence": 1801953100,
+  "mode": 4,
+  "core_status": 2,
+  "response_crc32": 1109210097,
+  "uart_roundtrip_seconds": 1.1705043999827467,
+  "request_payload_bytes": 147456,
+  "response_payload_bytes": 49152,
+  "frame": 278,
+  "mode_name": "equalize",
+  "source_bgr_shape": [
+    480,
+    640,
+    3
+  ],
+  "input_rgb_shape": [
+    192,
+    256,
+    3
+  ],
+  "output_shape": [
+    192,
+    256
+  ],
+  "exact_match": true,
+  "mismatch_pixels": 0,
+  "max_abs_error": 0
+}

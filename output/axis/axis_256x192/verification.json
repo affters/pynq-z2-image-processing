@@ -1,0 +1,16 @@
+{
+  "width": 256,
+  "height": 192,
+  "input_pixels": 49152,
+  "output_counts": [
+    49152,
+    48260,
+    48260,
+    48260,
+    49152
+  ],
+  "seed": 20261029,
+  "exact_match": true,
+  "hardware_test": false,
+  "input_sha256": "2eed013253434b2dc800546309f7725327d5ab00443772463ebf563387e32a44"
+}

@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-11-03T04:08:21.9385557Z",
+  "stage": "C:/Users/[user]\\AppData\\Local\\Temp\\pynq_uart_8d6727c9266c4694a30fd6102338c689",
+  "baudrate": 2000000,
+  "image_width": 256,
+  "image_height": 192,
+  "firmware_info": "pynq_uart_image_256x192_v1",
+  "pair_validation": "manifest_bound",
+  "hashes": {
+    "image_system.bit": "5C5F834D520717EA27782CC4F84BA5B8339E02E11DC12EB4B0EACCEA842F702E",
+    "ps7_init.tcl": "05FF63C18D43E9D8B6B117AB9E5463D76B8235266DAEC17327D23E09FECC788B",
+    "firmware.elf": "9FB1BECF183C475F5228062D576ECD684E0342AF231DBCC24C090A6B1FC42AC9",
+    "load.tcl": "02787928BC61EBAD726063A7F5FD08946B45789C50F06EA237FB20D8F1D0F4C8"
+  },
+  "sd_write_performed": false,
+  "flash_write_performed": false,
+  "scope": "Temporary FPGA plus ARM firmware load; transport/image validation is separate"
+}

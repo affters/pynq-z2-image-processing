@@ -71,7 +71,8 @@ def worker_case(base, name, limit, stop_after=None, mismatch=False, cleanup_faul
         def close(self):
             events.append("uart_close")
 
-    def open_camera(name):
+    def open_camera(name, width=128, height=96):
+        assert (width, height) == (128, 96)
         events.append("camera_open")
         return Capture(), {"selected": {"name": name, "index": 0, "vid": "0c45", "pid": "6366"}}
 
@@ -92,9 +93,15 @@ def worker_case(base, name, limit, stop_after=None, mismatch=False, cleanup_faul
     demo.start_button, demo.stop_button = Widget(), Widget()
     demo.port_entry, demo.baud_box = Widget(), Widget()
     demo.render_frame = lambda event: None  # Avoid ImageTk/Tk creation in host proof.
+    def read_camera(capture, include_source=False, width=128, height=96):
+        assert (width, height) == (128, 96)
+        rgb = np.full((96, 128, 3), 128, dtype=np.uint8)
+        assert include_source is True
+        return rgb, [480, 640, 3], np.full((480, 640, 3), 128, dtype=np.uint8)
+
     with patch.object(live, "FrameClient", Client), \
          patch.object(live, "open_selected_camera", open_camera), \
-         patch.object(live, "read_camera_rgb", lambda capture: (np.full((96, 128, 3), 128, dtype=np.uint8), [480, 640, 3])):
+         patch.object(live, "read_camera_rgb", read_camera):
         demo.worker("HOST_STUB", 2000000, stop)
     files = list((base / name).glob("session_*/result.json"))
     assert len(files) == 1

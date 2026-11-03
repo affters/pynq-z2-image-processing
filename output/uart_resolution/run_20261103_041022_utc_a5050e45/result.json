@@ -1,0 +1,446 @@
+{
+  "started_utc": "2026-11-03T04:10:22.711085+00:00",
+  "source": "camera_rgb",
+  "width": 256,
+  "height": 192,
+  "port": "COM6",
+  "baudrate": 2000000,
+  "timeout_seconds": 15.0,
+  "hardware_access_attempted": true,
+  "hardware_test_attempted": true,
+  "info_handshake_passed": true,
+  "hardware_test": true,
+  "camera_capture_test": true,
+  "camera_test": true,
+  "linux_test": false,
+  "sd_used": false,
+  "planned_frames": 10,
+  "planned_output_pixels": 486168,
+  "actual_output_pixels": 486168,
+  "actual_fpga_frames_verified": 10,
+  "inputs": [
+    {
+      "frame": 0,
+      "input_rgb_shape": [
+        192,
+        256,
+        3
+      ],
+      "source_bgr_shape": [
+        480,
+        640,
+        3
+      ],
+      "input_rgb_sha256": "a3f9b78eb501816c383f0cf5731979e59aac915aaed2e4d58628b0e0dfc1fe92",
+      "input_rgb_bytes": 147456,
+      "png": "inputs/frame0.png",
+      "npy": "inputs/frame0.npy",
+      "rgb": "inputs/frame0.rgb"
+    },
+    {
+      "frame": 1,
+      "input_rgb_shape": [
+        192,
+        256,
+        3
+      ],
+      "source_bgr_shape": [
+        480,
+        640,
+        3
+      ],
+      "input_rgb_sha256": "239b6369156f98206472df3c47a6eda47b644f71638edaa2c40c94acb4632ccf",
+      "input_rgb_bytes": 147456,
+      "png": "inputs/frame1.png",
+      "npy": "inputs/frame1.npy",
+      "rgb": "inputs/frame1.rgb"
+    }
+  ],
+  "cases": [
+    {
+      "sequence": 2079030576,
+      "mode": 0,
+      "core_status": 2,
+      "response_crc32": 122114486,
+      "uart_roundtrip_seconds": 1.1673020000162069,
+      "request_payload_bytes": 147456,
+      "response_payload_bytes": 49152,
+      "input_rgb_sha256": "a3f9b78eb501816c383f0cf5731979e59aac915aaed2e4d58628b0e0dfc1fe92",
+      "host_references_seconds": 0.03106050001224503,
+      "independent_scalar_reference_match": true,
+      "capture_resize_seconds": 0.0010196999937761575,
+      "input_width": 256,
+      "input_height": 192,
+      "frame": 0,
+      "mode_name": "gray",
+      "source_bgr_shape": [
+        480,
+        640,
+        3
+      ],
+      "input_rgb_shape": [
+        192,
+        256,
+        3
+      ],
+      "output_shape": [
+        192,
+        256
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0
+    },
+    {
+      "sequence": 2079030577,
+      "mode": 1,
+      "core_status": 2,
+      "response_crc32": 4068930397,
+      "uart_roundtrip_seconds": 1.161405899998499,
+      "request_payload_bytes": 147456,
+      "response_payload_bytes": 48260,
+      "input_rgb_sha256": "a3f9b78eb501816c383f0cf5731979e59aac915aaed2e4d58628b0e0dfc1fe92",
+      "host_references_seconds": 0.055224600015208125,
+      "independent_scalar_reference_match": true,
+      "capture_resize_seconds": 0.0010196999937761575,
+      "input_width": 256,
+      "input_height": 192,
+      "frame": 0,
+      "mode_name": "gaussian",
+      "source_bgr_shape": [
+        480,
+        640,
+        3
+      ],
+      "input_rgb_shape": [
+        192,
+        256,
+        3
+      ],
+      "output_shape": [
+        190,
+        254
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0
+    },
+    {
+      "sequence": 2079030578,
+      "mode": 2,
+      "core_status": 2,
+      "response_crc32": 1649002777,
+      "uart_roundtrip_seconds": 1.1617968000064138,
+      "request_payload_bytes": 147456,
+      "response_payload_bytes": 48260,
+      "input_rgb_sha256": "a3f9b78eb501816c383f0cf5731979e59aac915aaed2e4d58628b0e0dfc1fe92",
+      "host_references_seconds": 0.06274949997896329,
+      "independent_scalar_reference_match": true,
+      "capture_resize_seconds": 0.0010196999937761575,
+      "input_width": 256,
+      "input_height": 192,
+      "frame": 0,
+      "mode_name": "sobel",
+      "source_bgr_shape": [
+        480,
+        640,
+        3
+      ],
+      "input_rgb_shape": [
+        192,
+        256,
+        3
+      ],
+      "output_shape": [
+        190,
+        254
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0
+    },
+    {
+      "sequence": 2079030579,
+      "mode": 3,
+      "core_status": 2,
+      "response_crc32": 2630780515,
+      "uart_roundtrip_seconds": 1.1621571999858133,
+      "request_payload_bytes": 147456,
+      "response_payload_bytes": 48260,
+      "input_rgb_sha256": "a3f9b78eb501816c383f0cf5731979e59aac915aaed2e4d58628b0e0dfc1fe92",
+      "host_references_seconds": 0.05840919999172911,
+      "independent_scalar_reference_match": true,
+      "capture_resize_seconds": 0.0010196999937761575,
+      "input_width": 256,
+      "input_height": 192,
+      "frame": 0,
+      "mode_name": "sharpen",
+      "source_bgr_shape": [
+        480,
+        640,
+        3
+      ],
+      "input_rgb_shape": [
+        192,
+        256,
+        3
+      ],
+      "output_shape": [
+        190,
+        254
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0
+    },
+    {
+      "sequence": 2079030580,
+      "mode": 4,
+      "core_status": 2,
+      "response_crc32": 1880088571,
+      "uart_roundtrip_seconds": 1.1711326999939047,
+      "request_payload_bytes": 147456,
+      "response_payload_bytes": 49152,
+      "input_rgb_sha256": "a3f9b78eb501816c383f0cf5731979e59aac915aaed2e4d58628b0e0dfc1fe92",
+      "host_references_seconds": 0.03336610001861118,
+      "independent_scalar_reference_match": true,
+      "capture_resize_seconds": 0.0010196999937761575,
+      "input_width": 256,
+      "input_height": 192,
+      "frame": 0,
+      "mode_name": "equalize",
+      "source_bgr_shape": [
+        480,
+        640,
+        3
+      ],
+      "input_rgb_shape": [
+        192,
+        256,
+        3
+      ],
+      "output_shape": [
+        192,
+        256
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0
+    },
+    {
+      "sequence": 2079030581,
+      "mode": 0,
+      "core_status": 2,
+      "response_crc32": 3542246071,
+      "uart_roundtrip_seconds": 1.1674010999849997,
+      "request_payload_bytes": 147456,
+      "response_payload_bytes": 49152,
+      "input_rgb_sha256": "239b6369156f98206472df3c47a6eda47b644f71638edaa2c40c94acb4632ccf",
+      "host_references_seconds": 0.030603200022596866,
+      "independent_scalar_reference_match": true,
+      "capture_resize_seconds": 0.0010168000007979572,
+      "input_width": 256,
+      "input_height": 192,
+      "frame": 1,
+      "mode_name": "gray",
+      "source_bgr_shape": [
+        480,
+        640,
+        3
+      ],
+      "input_rgb_shape": [
+        192,
+        256,
+        3
+      ],
+      "output_shape": [
+        192,
+        256
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0
+    },
+    {
+      "sequence": 2079030582,
+      "mode": 1,
+      "core_status": 2,
+      "response_crc32": 1012321977,
+      "uart_roundtrip_seconds": 1.16138740000315,
+      "request_payload_bytes": 147456,
+      "response_payload_bytes": 48260,
+      "input_rgb_sha256": "239b6369156f98206472df3c47a6eda47b644f71638edaa2c40c94acb4632ccf",
+      "host_references_seconds": 0.05764320000889711,
+      "independent_scalar_reference_match": true,
+      "capture_resize_seconds": 0.0010168000007979572,
+      "input_width": 256,
+      "input_height": 192,
+      "frame": 1,
+      "mode_name": "gaussian",
+      "source_bgr_shape": [
+        480,
+        640,
+        3
+      ],
+      "input_rgb_shape": [
+        192,
+        256,
+        3
+      ],
+      "output_shape": [
+        190,
+        254
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0
+    },
+    {
+      "sequence": 2079030583,
+      "mode": 2,
+      "core_status": 2,
+      "response_crc32": 3552918420,
+      "uart_roundtrip_seconds": 1.1620802000106778,
+      "request_payload_bytes": 147456,
+      "response_payload_bytes": 48260,
+      "input_rgb_sha256": "239b6369156f98206472df3c47a6eda47b644f71638edaa2c40c94acb4632ccf",
+      "host_references_seconds": 0.06886889997986145,
+      "independent_scalar_reference_match": true,
+      "capture_resize_seconds": 0.0010168000007979572,
+      "input_width": 256,
+      "input_height": 192,
+      "frame": 1,
+      "mode_name": "sobel",
+      "source_bgr_shape": [
+        480,
+        640,
+        3
+      ],
+      "input_rgb_shape": [
+        192,
+        256,
+        3
+      ],
+      "output_shape": [
+        190,
+        254
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0
+    },
+    {
+      "sequence": 2079030584,
+      "mode": 3,
+      "core_status": 2,
+      "response_crc32": 480731963,
+      "uart_roundtrip_seconds": 1.161414899979718,
+      "request_payload_bytes": 147456,
+      "response_payload_bytes": 48260,
+      "input_rgb_sha256": "239b6369156f98206472df3c47a6eda47b644f71638edaa2c40c94acb4632ccf",
+      "host_references_seconds": 0.06301839998923242,
+      "independent_scalar_reference_match": true,
+      "capture_resize_seconds": 0.0010168000007979572,
+      "input_width": 256,
+      "input_height": 192,
+      "frame": 1,
+      "mode_name": "sharpen",
+      "source_bgr_shape": [
+        480,
+        640,
+        3
+      ],
+      "input_rgb_shape": [
+        192,
+        256,
+        3
+      ],
+      "output_shape": [
+        190,
+        254
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0
+    },
+    {
+      "sequence": 2079030585,
+      "mode": 4,
+      "core_status": 2,
+      "response_crc32": 2061401122,
+      "uart_roundtrip_seconds": 1.1710306000022683,
+      "request_payload_bytes": 147456,
+      "response_payload_bytes": 49152,
+      "input_rgb_sha256": "239b6369156f98206472df3c47a6eda47b644f71638edaa2c40c94acb4632ccf",
+      "host_references_seconds": 0.03882210000301711,
+      "independent_scalar_reference_match": true,
+      "capture_resize_seconds": 0.0010168000007979572,
+      "input_width": 256,
+      "input_height": 192,
+      "frame": 1,
+      "mode_name": "equalize",
+      "source_bgr_shape": [
+        480,
+        640,
+        3
+      ],
+      "input_rgb_shape": [
+        192,
+        256,
+        3
+      ],
+      "output_shape": [
+        192,
+        256
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0
+    }
+  ],
+  "all_requested_frames_passed": true,
+  "requested_action_passed": true,
+  "error": null,
+  "cleanup_errors": [],
+  "timing_note": "UART roundtrip includes transport and ARM/DMA/PL work; excludes capture, references and saving. It is not PL latency or displayed FPS.",
+  "firmware_info": "pynq_uart_image_256x192_v1",
+  "info_roundtrip_seconds": 0.01520709999022074,
+  "camera": {
+    "selected": {
+      "index": 0,
+      "name": "MF200 Camera",
+      "vid": "0c45",
+      "pid": "6366"
+    },
+    "inventory": [
+      {
+        "index": 0,
+        "name": "MF200 Camera",
+        "vid": "0c45",
+        "pid": "6366"
+      },
+      {
+        "index": 1,
+        "name": "HD Webcam",
+        "vid": "04f2",
+        "pid": "b78a"
+      }
+    ],
+    "unique_device_paths_omitted": true,
+    "backend": "DSHOW",
+    "warmup_frames": 20,
+    "source_bgr_shape": [
+      480,
+      640,
+      3
+    ],
+    "processed_rgb_shape": [
+      192,
+      256,
+      3
+    ],
+    "resize": "OpenCV INTER_AREA",
+    "conversion": "BGR to RGB"
+  },
+  "completed_utc": "2026-11-03T04:10:40.191117+00:00"
+}

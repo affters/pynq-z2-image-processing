@@ -1,0 +1,45 @@
+{
+  "sequence": 1948025180,
+  "mode": 2,
+  "core_status": 2,
+  "response_crc32": 4098600984,
+  "uart_roundtrip_seconds": 1.1630306000006385,
+  "request_payload_bytes": 147456,
+  "response_payload_bytes": 48260,
+  "input_rgb_sha256": "70897fbe111cca38f9c46de782dbc80406bc650ab36316c5ebd22bffbb5d61dc",
+  "actual_sha256": "d618db299f958989b516495ad9905d2198cc3ee1bfbdc951021ba94ec49b3071",
+  "independent_scalar_reference_match": true,
+  "geometry_verified": true,
+  "frame": 0,
+  "mode_name": "sobel",
+  "source_bgr_shape": null,
+  "input_rgb_shape": [
+    192,
+    256,
+    3
+  ],
+  "output_shape": [
+    190,
+    254
+  ],
+  "exact_match": true,
+  "mismatch_pixels": 0,
+  "max_abs_error": 0,
+  "measurement_status": "ok",
+  "analytic_expectation": {
+    "status": "ok",
+    "long_px": 129,
+    "short_px": 65,
+    "tolerance_px": 1,
+    "definition": "Sobel outer-envelope pixel-centre span, not source cell count"
+  },
+  "measurement_path": "frame0_mode2/measurement.json",
+  "measurement_sha256": "cbc2498cbf411503d97e88012753124b33138ff9a6035f194590cad0fb7c5869",
+  "artifact_sha256": {
+    "pixels.npz": "8ff6f510e2e1271c172c4e6b0398f8c6d954dae5e27cd0d65a1248b5d8176656",
+    "actual.gray": "d618db299f958989b516495ad9905d2198cc3ee1bfbdc951021ba94ec49b3071",
+    "expected.gray": "d618db299f958989b516495ad9905d2198cc3ee1bfbdc951021ba94ec49b3071",
+    "difference.gray": "b3a36ed467bd7ed16b081ee7400ea5e38bb39545287a8a17bb8ac83fe82b3609",
+    "measurement_overlay.png": "f7178aa8a4b2ae173cdb9c42ff012ed208ae9834154777eb9e1ea19781655392"
+  }
+}

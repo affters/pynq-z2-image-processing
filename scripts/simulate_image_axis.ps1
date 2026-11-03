@@ -1,7 +1,7 @@
 param(
     [int]$Width = 128, [int]$Height = 96,
     [string]$VivadoBin = 'E:\sailingsi\Vivado\2020.2\bin',
-    [string]$PythonPath = 'python'
+    [string]$PythonPath = 'C:/Users/[user]\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe'
 )
 $ErrorActionPreference = 'Stop'
 $projectRoot = Split-Path -Parent $PSScriptRoot

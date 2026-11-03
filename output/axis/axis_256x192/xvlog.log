@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/[user]/AppData/Local/Temp/codex_pfga_axis_256x192_98f656603164475bb9e22a19502db7d9/rtl/rgb_to_gray.v" into library work
+INFO: [VRFC 10-311] analyzing module rgb_to_gray
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/[user]/AppData/Local/Temp/codex_pfga_axis_256x192_98f656603164475bb9e22a19502db7d9/rtl/gray_filter_3x3.v" into library work
+INFO: [VRFC 10-311] analyzing module gray_filter_3x3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/[user]/AppData/Local/Temp/codex_pfga_axis_256x192_98f656603164475bb9e22a19502db7d9/rtl/frame_equalize.v" into library work
+INFO: [VRFC 10-311] analyzing module frame_equalize
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/[user]/AppData/Local/Temp/codex_pfga_axis_256x192_98f656603164475bb9e22a19502db7d9/rtl/image_axis_core.v" into library work
+INFO: [VRFC 10-311] analyzing module image_axis_core
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/[user]/AppData/Local/Temp/codex_pfga_axis_256x192_98f656603164475bb9e22a19502db7d9/sim/tb_image_axis_core.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_image_axis_core
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/[user]/AppData/Local/Temp/codex_pfga_axis_256x192_98f656603164475bb9e22a19502db7d9/sim/tb_image_case.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_image_case

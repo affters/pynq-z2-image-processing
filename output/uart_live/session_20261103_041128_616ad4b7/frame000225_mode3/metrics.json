@@ -1,0 +1,28 @@
+{
+  "sequence": 1801953047,
+  "mode": 3,
+  "core_status": 2,
+  "response_crc32": 1406460181,
+  "uart_roundtrip_seconds": 1.1614005000155885,
+  "request_payload_bytes": 147456,
+  "response_payload_bytes": 48260,
+  "frame": 225,
+  "mode_name": "sharpen",
+  "source_bgr_shape": [
+    480,
+    640,
+    3
+  ],
+  "input_rgb_shape": [
+    192,
+    256,
+    3
+  ],
+  "output_shape": [
+    190,
+    254
+  ],
+  "exact_match": true,
+  "mismatch_pixels": 0,
+  "max_abs_error": 0
+}

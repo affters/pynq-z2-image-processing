@@ -1,0 +1,40 @@
+{
+  "pair_validated": true,
+  "hardware_access": false,
+  "validation_mode": "manifest_bound",
+  "image_width": 256,
+  "image_height": 192,
+  "firmware_info": "pynq_uart_image_256x192_v1",
+  "firmware_elf_sha256": "9fb1becf183c475f5228062d576ecd684e0342af231dbcc24c090a6b1fc42ac9",
+  "hardware_manifest_sha256": "724d386998a90b44e15ad66654d832f517aba436010be7e033561314a114faba",
+  "artifacts": {
+    "image_system.bit": {
+      "sha256": "5c5f834d520717ea27782cc4f84ba5b8339e02e11dc12eb4b0eaccea842f702e",
+      "bytes": 1125830
+    },
+    "image_system.hwh": {
+      "sha256": "e6a2bdc971ba0f44ac6e8d4a65033cf5bd3386aea3d6acc5fa15b089b5092544",
+      "bytes": 343577
+    },
+    "image_system.xsa": {
+      "sha256": "4723c9d3bcbc26f2539dcccca9e12c46036640884163971d19d729334434630b",
+      "bytes": 512504
+    },
+    "ps7_init.tcl": {
+      "sha256": "05ff63c18d43e9d8b6b117ab9e5463d76b8235266daec17327d23e09fecc788b",
+      "bytes": 36596
+    },
+    "timing_summary.rpt": {
+      "sha256": "69bad2967e799bc24f01e25f7d70c689575c0bd94db0762ab00893803f1b4e27",
+      "bytes": 415326
+    },
+    "drc.rpt": {
+      "sha256": "5b23f3ce1aea0890e79236f134bd595d226c59dff6f759e4b88add18859bc214",
+      "bytes": 7472
+    },
+    "implementation_summary.txt": {
+      "sha256": "32bed160286ea5c0a88eec544e50b4690aa1b924f2e10ffbf585132142b4195a",
+      "bytes": 457
+    }
+  }
+}

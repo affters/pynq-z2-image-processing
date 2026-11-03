@@ -890,6 +890,16 @@ set output_dir [file join $project_root output image_system]
 set project_dir [file join $project_root vivado_project]
 set target_part xc7z020clg400-1
 set_param general.maxThreads 2
+set image_width 128
+set image_height 96
+if {$argc != 0} {
+    if {$argc != 2} {error "Expected optional width and height"}
+    lassign $argv image_width image_height
+}
+if {![string is integer -strict $image_width] || ![string is integer -strict $image_height] ||
+    !(($image_width == 128 && $image_height == 96) || ($image_width == 256 && $image_height == 192))} {
+    error "Supported resolution profiles: 128x96 or 256x192"
+}
 
 if {[catch {
     if {![string match 2020.2* [version -short]]} {
@@ -965,7 +975,11 @@ if {[catch {
     set_property -dict [list CONFIG.NUM_SI {2} CONFIG.NUM_MI {1}] $memory_ic
 
     create_bd_cell -type module -reference image_axis_core image_axis_core_0
-    set_property -dict [list CONFIG.IMAGE_WIDTH {128} CONFIG.IMAGE_HEIGHT {96}] [get_bd_cells image_axis_core_0]
+    set_property -dict [list CONFIG.IMAGE_WIDTH $image_width CONFIG.IMAGE_HEIGHT $image_height] [get_bd_cells image_axis_core_0]
+    if {[get_property CONFIG.IMAGE_WIDTH [get_bd_cells image_axis_core_0]] != $image_width ||
+        [get_property CONFIG.IMAGE_HEIGHT [get_bd_cells image_axis_core_0]] != $image_height} {
+        error "Image-core dimensions did not match the requested profile"
+    }
     connect_bd_intf_net [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S] [get_bd_intf_pins image_axis_core_0/S_AXIS]
     connect_bd_intf_net [get_bd_intf_pins image_axis_core_0/M_AXIS] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]
     connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins image_axis_core_0/control]
@@ -1098,8 +1112,8 @@ if {[catch {
     puts $info "drc_errors=[llength $drc_errors]"
     puts $info "ext_reset_active_high=$ext_reset_high"
     puts $info "aux_reset_active_high=$aux_reset_high aux_tied_low=1"
-    puts $info "image_width=128"
-    puts $info "image_height=96"
+    puts $info "image_width=$image_width"
+    puts $info "image_height=$image_height"
     puts $info "gpio_address=0x41200000 control_offset=0x00 status_offset=0x08"
     puts $info "dma_address=0x40400000 mode=simple stream_bits=32 memory_bits=32 length_bits=23"
     puts $info "ps7_preset=Xilinx/PYNQ@v2.7.0:dd415eac9a19aeb5ec9341718c47a68f76204544"

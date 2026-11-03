@@ -1,0 +1,43 @@
+{
+  "sequence": 1948025181,
+  "mode": 2,
+  "core_status": 2,
+  "response_crc32": 893722944,
+  "uart_roundtrip_seconds": 1.1626127999916207,
+  "request_payload_bytes": 147456,
+  "response_payload_bytes": 48260,
+  "input_rgb_sha256": "4ae2e6e6e32dace013ba173d69a66ac11951b0d718d68aaf31816a8b69264794",
+  "actual_sha256": "b3a36ed467bd7ed16b081ee7400ea5e38bb39545287a8a17bb8ac83fe82b3609",
+  "independent_scalar_reference_match": true,
+  "geometry_verified": true,
+  "frame": 1,
+  "mode_name": "sobel",
+  "source_bgr_shape": null,
+  "input_rgb_shape": [
+    192,
+    256,
+    3
+  ],
+  "output_shape": [
+    190,
+    254
+  ],
+  "exact_match": true,
+  "mismatch_pixels": 0,
+  "max_abs_error": 0,
+  "measurement_status": "no_contour",
+  "analytic_expectation": {
+    "status": "no_contour",
+    "long_px": null,
+    "short_px": null
+  },
+  "measurement_path": "frame1_mode2/measurement.json",
+  "measurement_sha256": "0e5b0456e05eb75e32c3900ea94e4f25904970a12fe80f15520067443a3f0f08",
+  "artifact_sha256": {
+    "pixels.npz": "a4b37e9207c0c2c2b4b546b4ab36aae226cef92875e7df88645b8674f70da041",
+    "actual.gray": "b3a36ed467bd7ed16b081ee7400ea5e38bb39545287a8a17bb8ac83fe82b3609",
+    "expected.gray": "b3a36ed467bd7ed16b081ee7400ea5e38bb39545287a8a17bb8ac83fe82b3609",
+    "difference.gray": "b3a36ed467bd7ed16b081ee7400ea5e38bb39545287a8a17bb8ac83fe82b3609",
+    "measurement_overlay.png": "bad504e532bbcfa010ac0240400b70592a93cde39ade8f0b4a8a9c355e212778"
+  }
+}

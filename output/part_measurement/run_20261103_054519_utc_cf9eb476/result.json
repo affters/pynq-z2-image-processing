@@ -1,0 +1,163 @@
+{
+  "started_utc": "2026-11-03T05:45:19.618203+00:00",
+  "source": "fixed_digital_rectangle_and_uniform_white",
+  "width": 256,
+  "height": 192,
+  "port": "COM6",
+  "baudrate": 2000000,
+  "timeout_seconds": 15.0,
+  "mode": 2,
+  "hardware_access_attempted": true,
+  "info_handshake_passed": true,
+  "hardware_test_attempted": true,
+  "hardware_test": true,
+  "camera_opened": false,
+  "camera_test": false,
+  "physical_accuracy_verified": false,
+  "geometry_location": "host_after_verified_fpga_sobel",
+  "linux_test": false,
+  "sd_used": false,
+  "flash_written": false,
+  "planned_frames": 2,
+  "planned_output_pixels": 96520,
+  "actual_fpga_frames_verified": 2,
+  "actual_geometry_frames_verified": 2,
+  "actual_output_pixels": 96520,
+  "inputs": [
+    {
+      "frame": 0,
+      "input_rgb_shape": [
+        192,
+        256,
+        3
+      ],
+      "source_bgr_shape": null,
+      "input_rgb_sha256": "70897fbe111cca38f9c46de782dbc80406bc650ab36316c5ebd22bffbb5d61dc",
+      "input_rgb_bytes": 147456,
+      "png": "inputs/frame0.png",
+      "npy": "inputs/frame0.npy",
+      "rgb": "inputs/frame0.rgb"
+    },
+    {
+      "frame": 1,
+      "input_rgb_shape": [
+        192,
+        256,
+        3
+      ],
+      "source_bgr_shape": null,
+      "input_rgb_sha256": "4ae2e6e6e32dace013ba173d69a66ac11951b0d718d68aaf31816a8b69264794",
+      "input_rgb_bytes": 147456,
+      "png": "inputs/frame1.png",
+      "npy": "inputs/frame1.npy",
+      "rgb": "inputs/frame1.rgb"
+    }
+  ],
+  "cases": [
+    {
+      "sequence": 1948025180,
+      "mode": 2,
+      "core_status": 2,
+      "response_crc32": 4098600984,
+      "uart_roundtrip_seconds": 1.1630306000006385,
+      "request_payload_bytes": 147456,
+      "response_payload_bytes": 48260,
+      "input_rgb_sha256": "70897fbe111cca38f9c46de782dbc80406bc650ab36316c5ebd22bffbb5d61dc",
+      "actual_sha256": "d618db299f958989b516495ad9905d2198cc3ee1bfbdc951021ba94ec49b3071",
+      "independent_scalar_reference_match": true,
+      "geometry_verified": true,
+      "frame": 0,
+      "mode_name": "sobel",
+      "source_bgr_shape": null,
+      "input_rgb_shape": [
+        192,
+        256,
+        3
+      ],
+      "output_shape": [
+        190,
+        254
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0,
+      "measurement_status": "ok",
+      "analytic_expectation": {
+        "status": "ok",
+        "long_px": 129,
+        "short_px": 65,
+        "tolerance_px": 1,
+        "definition": "Sobel outer-envelope pixel-centre span, not source cell count"
+      },
+      "measurement_path": "frame0_mode2/measurement.json",
+      "measurement_sha256": "cbc2498cbf411503d97e88012753124b33138ff9a6035f194590cad0fb7c5869",
+      "artifact_sha256": {
+        "pixels.npz": "8ff6f510e2e1271c172c4e6b0398f8c6d954dae5e27cd0d65a1248b5d8176656",
+        "actual.gray": "d618db299f958989b516495ad9905d2198cc3ee1bfbdc951021ba94ec49b3071",
+        "expected.gray": "d618db299f958989b516495ad9905d2198cc3ee1bfbdc951021ba94ec49b3071",
+        "difference.gray": "b3a36ed467bd7ed16b081ee7400ea5e38bb39545287a8a17bb8ac83fe82b3609",
+        "measurement_overlay.png": "f7178aa8a4b2ae173cdb9c42ff012ed208ae9834154777eb9e1ea19781655392"
+      }
+    },
+    {
+      "sequence": 1948025181,
+      "mode": 2,
+      "core_status": 2,
+      "response_crc32": 893722944,
+      "uart_roundtrip_seconds": 1.1626127999916207,
+      "request_payload_bytes": 147456,
+      "response_payload_bytes": 48260,
+      "input_rgb_sha256": "4ae2e6e6e32dace013ba173d69a66ac11951b0d718d68aaf31816a8b69264794",
+      "actual_sha256": "b3a36ed467bd7ed16b081ee7400ea5e38bb39545287a8a17bb8ac83fe82b3609",
+      "independent_scalar_reference_match": true,
+      "geometry_verified": true,
+      "frame": 1,
+      "mode_name": "sobel",
+      "source_bgr_shape": null,
+      "input_rgb_shape": [
+        192,
+        256,
+        3
+      ],
+      "output_shape": [
+        190,
+        254
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0,
+      "measurement_status": "no_contour",
+      "analytic_expectation": {
+        "status": "no_contour",
+        "long_px": null,
+        "short_px": null
+      },
+      "measurement_path": "frame1_mode2/measurement.json",
+      "measurement_sha256": "0e5b0456e05eb75e32c3900ea94e4f25904970a12fe80f15520067443a3f0f08",
+      "artifact_sha256": {
+        "pixels.npz": "a4b37e9207c0c2c2b4b546b4ab36aae226cef92875e7df88645b8674f70da041",
+        "actual.gray": "b3a36ed467bd7ed16b081ee7400ea5e38bb39545287a8a17bb8ac83fe82b3609",
+        "expected.gray": "b3a36ed467bd7ed16b081ee7400ea5e38bb39545287a8a17bb8ac83fe82b3609",
+        "difference.gray": "b3a36ed467bd7ed16b081ee7400ea5e38bb39545287a8a17bb8ac83fe82b3609",
+        "measurement_overlay.png": "bad504e532bbcfa010ac0240400b70592a93cde39ade8f0b4a8a9c355e212778"
+      }
+    }
+  ],
+  "source_sha256": {
+    "scripts/test_part_measurement_hardware.py": "4022565b93c90c47ace5b9bdd36855bad87ec7edc7d1ec91d61d69d118c7692a",
+    "software/part_measurement.py": "da865db48c459086258fa87a23e0fb5b25441e10e09a9c398e7bf59487758b64",
+    "software/uart_image_client.py": "4f9121e3e96882ddd24064efda48c8bbe8615b1b39410db06600da1614c69087",
+    "software/image_reference.py": "289f3410d4f4620f8a0aa8d8c2af1dc7cc22188adfaacb3ff30fa99dd85d6d8d",
+    "scripts/test_uart_resolution.py": "cb747b6ebca0c4658efd5c11e932342f357d26d5776dc1f26d2de81e66fb18da",
+    "scripts/filter_reference.py": "998bd36fa9f53e58cfe1052f52aaaa350a2fdc3922cce548fc0509a7859752e4"
+  },
+  "all_requested_frames_passed": true,
+  "requested_action_passed": true,
+  "error": null,
+  "cleanup_errors": [],
+  "scope": "Real FPGA Sobel pixels and host digital-contour geometry; no camera object or physical-mm accuracy test.",
+  "timing_note": "UART roundtrip includes transport and ARM/DMA/PL; not isolated PL latency or GUI FPS.",
+  "firmware_info": "pynq_uart_image_256x192_v1",
+  "info_roundtrip_seconds": 0.015241399989463389,
+  "completed_utc": "2026-11-03T05:45:22.261134+00:00"
+}

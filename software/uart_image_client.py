@@ -23,6 +23,25 @@ WIDTH, HEIGHT = 128, 96
 RGB_BYTES = WIDTH * HEIGHT * 3
 MAX_RESPONSE_BYTES = WIDTH * HEIGHT
 BAUDRATES = (115200, 1000000, 2000000)
+RESOLUTION_PROFILES = {
+    (128, 96): FIRMWARE_INFO,
+    (256, 192): b"pynq_uart_image_256x192_v1",
+}
+
+
+def resolution_profile(width=WIDTH, height=HEIGHT):
+    """Validate an explicit host/firmware contract; never infer it from replies."""
+    if isinstance(width, (bool, np.bool_)) or isinstance(height, (bool, np.bool_)):
+        raise ValueError("Expected a supported integer resolution profile")
+    try:
+        width, height = operator.index(width), operator.index(height)
+    except TypeError as exc:
+        raise ValueError("Expected a supported integer resolution profile") from exc
+    try:
+        identity = RESOLUTION_PROFILES[(width, height)]
+    except KeyError as exc:
+        raise ValueError("Supported resolution profiles: 128x96 or 256x192") from exc
+    return width, height, identity
 
 
 class UARTProtocolError(RuntimeError):
@@ -46,7 +65,8 @@ class FrameClient:
     port, DTR/RTS and all flow-control modes are disabled before opening it.
     """
 
-    def __init__(self, port, baudrate=115200, timeout=20.0, transport=None):
+    def __init__(self, port, baudrate=115200, timeout=20.0, transport=None,
+                 width=WIDTH, height=HEIGHT):
         if not isinstance(port, str) or not port.strip():
             raise ValueError("An explicit serial port is required")
         if baudrate not in BAUDRATES:
@@ -56,6 +76,9 @@ class FrameClient:
         self.port = port
         self.baudrate = baudrate
         self.timeout = float(timeout)
+        self.width, self.height, self.expected_firmware_info = resolution_profile(width, height)
+        self.rgb_bytes = self.width * self.height * 3
+        self.max_response_bytes = self.width * self.height
         self._test_transport = transport
         self._serial = None
         self._lock = threading.Lock()
@@ -113,7 +136,8 @@ class FrameClient:
                 if hasattr(self._serial, "reset_input_buffer"):
                     self._serial.reset_input_buffer()
                 payload, header, elapsed = self._exchange(1, 0, 0, 0, b"")
-                if payload != FIRMWARE_INFO or (header[3], header[4]) != (WIDTH, HEIGHT):
+                if (payload != self.expected_firmware_info
+                        or (header[3], header[4]) != (self.width, self.height)):
                     raise UARTProtocolError("Unexpected firmware identity or dimensions")
                 if header[7] != 0:
                     raise UARTProtocolError("INFO must not report a PL operation")
@@ -196,17 +220,18 @@ class FrameClient:
         _, actual_sequence, status, out_width, out_height, size, checksum, core_status = result
         if actual_sequence != sequence:
             raise UARTProtocolError("Stale or incorrect response sequence")
-        if size > MAX_RESPONSE_BYTES:
+        if size > self.max_response_bytes:
             raise UARTProtocolError("Response payload exceeds the fixed image limit")
         if status:
             if size != 0 or checksum != 0:
                 raise UARTProtocolError("Error response must have an empty payload and CRC zero")
             raise UARTDeviceError(status, core_status)
         if command == 1:
-            if size != len(FIRMWARE_INFO):
+            if size != len(self.expected_firmware_info):
                 raise UARTProtocolError("INFO payload length differs from the firmware contract")
         else:
-            expected_shape = (WIDTH, HEIGHT) if mode in (0, 4) else (WIDTH - 2, HEIGHT - 2)
+            expected_shape = ((self.width, self.height) if mode in (0, 4)
+                              else (self.width - 2, self.height - 2))
             if (out_width, out_height) != expected_shape or size != out_width * out_height:
                 raise UARTProtocolError("Output shape or payload length differs from selected mode")
             if core_status & 7 != 2:
@@ -226,16 +251,16 @@ class FrameClient:
         if mode not in (0, 1, 2, 3, 4):
             raise ValueError("mode must be an integer from 0 through 4")
         image = np.asarray(rgb)
-        if image.dtype != np.uint8 or image.shape != (HEIGHT, WIDTH, 3):
-            raise ValueError("Expected a 96x128x3 uint8 RGB image")
+        if image.dtype != np.uint8 or image.shape != (self.height, self.width, 3):
+            raise ValueError("Expected a %dx%dx3 uint8 RGB image" % (self.height, self.width))
         payload = np.ascontiguousarray(image).tobytes()
-        if len(payload) != RGB_BYTES:
+        if len(payload) != self.rgb_bytes:
             raise ValueError("Unexpected fixed image byte count")
         with self._lock:
             if not self._ready or self._closed:
                 raise UARTProtocolError("INFO handshake is required before processing")
             try:
-                data, header, elapsed = self._exchange(2, int(mode), WIDTH, HEIGHT, payload)
+                data, header, elapsed = self._exchange(2, int(mode), self.width, self.height, payload)
                 _, sequence, _, out_width, out_height, _, checksum, core_status = header
                 result = np.frombuffer(data, dtype=np.uint8).reshape(out_height, out_width).copy()
                 return result, dict(sequence=sequence, mode=int(mode), core_status=core_status,

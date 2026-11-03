@@ -1,8 +1,13 @@
 param(
+    [int]$Width = 128,
+    [int]$Height = 96,
     [string]$VivadoPath = 'E:\sailingsi\Vivado\2020.2\bin\vivado.bat'
 )
 
 $ErrorActionPreference = 'Stop'
+if (!(($Width -eq 128 -and $Height -eq 96) -or ($Width -eq 256 -and $Height -eq 192))) {
+    throw 'Supported resolution profiles: 128x96 or 256x192'
+}
 if (-not (Test-Path -LiteralPath $VivadoPath -PathType Leaf)) {
     throw "Vivado was not found: $VivadoPath"
 }
@@ -22,6 +27,10 @@ if ($stageRoot -match '[^\x00-\x7F]') {
     throw "Vivado requires an ASCII temporary path: $stageRoot"
 }
 $finalOutput = Join-Path $projectRoot 'output\image_system'
+if ($Width -ne 128 -or $Height -ne 96) {
+    $buildTag = [DateTime]::UtcNow.ToString('yyyyMMdd_HHmmss') + '_utc_' + [guid]::NewGuid().ToString('N').Substring(0,8)
+    $finalOutput = Join-Path $projectRoot ("output\image_system_${Width}x${Height}\build_$buildTag")
+}
 foreach ($folder in @('rtl', 'scripts', 'constraints')) {
     New-Item -ItemType Directory -Path (Join-Path $stageRoot $folder) -Force | Out-Null
 }
@@ -37,6 +46,8 @@ $inputManifest = [ordered]@{
     part = 'xc7z020clg400-1'
     tool_version = '2020.2'
     fabric_clock_hz = 50000000
+    image_width = $Width
+    image_height = $Height
     stage_path = $stageRoot
     ps7_preset_source = 'https://github.com/Xilinx/PYNQ/blob/v2.7.0/boards/Pynq-Z2/petalinux_bsp/hardware_project/pynqz2.tcl'
     ps7_preset_git_blob = 'dd415eac9a19aeb5ec9341718c47a68f76204544'
@@ -50,7 +61,7 @@ Write-Output 'Builds PS7/DDR + DMA + GPIO + image core only; no hardware downloa
 $vivadoExit = -1
 Push-Location -LiteralPath $stageRoot
 try {
-    & $VivadoPath -mode batch -notrace -source 'scripts/build_image_system.tcl' -log 'image_system.log' -journal 'image_system.jou'
+    & $VivadoPath -mode batch -notrace -source 'scripts/build_image_system.tcl' -log 'image_system.log' -journal 'image_system.jou' -tclargs $Width $Height
     $vivadoExit = $LASTEXITCODE
 }
 finally {
@@ -85,4 +96,10 @@ foreach ($name in @('image_system.bit', 'image_system.hwh', 'image_system.xsa', 
 Get-ChildItem -LiteralPath $stagedOutput -File | Copy-Item -Destination $finalOutput
 $inputManifest | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath (Join-Path $finalOutput 'input_manifest.json') -Encoding ascii
 Copy-Item -LiteralPath (Join-Path $stageRoot 'image_system.log') -Destination (Join-Path $finalOutput 'image_system.log')
+$artifactHashes = [ordered]@{}
+foreach ($name in @('image_system.bit','image_system.hwh','image_system.xsa','ps7_init.tcl','timing_summary.rpt','drc.rpt','implementation_summary.txt')) {
+    $artifactPath = Join-Path $finalOutput $name
+    $artifactHashes[$name] = [ordered]@{sha256=(Get-FileHash -LiteralPath $artifactPath -Algorithm SHA256).Hash.ToLowerInvariant();bytes=(Get-Item -LiteralPath $artifactPath).Length}
+}
+[ordered]@{schema_version=1;image_width=$Width;image_height=$Height;part='xc7z020clg400-1';fabric_clock_hz=50000000;implementation_passed=$true;hardware_test=$false;artifacts=$artifactHashes;input_manifest_sha256=(Get-FileHash -LiteralPath (Join-Path $finalOutput 'input_manifest.json') -Algorithm SHA256).Hash.ToLowerInvariant()} | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath (Join-Path $finalOutput 'build_manifest.json') -Encoding utf8NoBOM
 Write-Output "IMAGE_SYSTEM_IMPLEMENTED_NOT_PROGRAMMED=$finalOutput"

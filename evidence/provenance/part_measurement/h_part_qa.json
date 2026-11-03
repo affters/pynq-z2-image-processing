@@ -1,0 +1,75 @@
+{
+  "created_utc": "2026-11-03T06:58:36.402828+00:00",
+  "status": "part_contour_and_calibrated_dimensions_demonstrated",
+  "feature_completed": true,
+  "real_camera_used": true,
+  "real_fpga_sobel_verified": true,
+  "geometry_computation": "host_after_verified_fpga_sobel",
+  "target_description": "H-shaped physical part provided by user; category name is human description, not an automatic classifier.",
+  "independent_target_dimensions_provided": false,
+  "physical_accuracy_verified": false,
+  "representative": {
+    "frame": 1881,
+    "path": "output/uart_live/session_20261103_061909_79b28f3d/frame001881_mode2/measurement.json",
+    "sha256": "f740cbef2da26883f18e2b1b7db742250fc433a1d923c79b8e97936e28a38844",
+    "settings": {
+      "enabled": true,
+      "threshold": 40,
+      "min_area": 80.0,
+      "close_gaps": false,
+      "roi": [
+        149,
+        31,
+        244,
+        154
+      ],
+      "mm_per_pixel": 0.7092198581560284,
+      "calibration_points": [
+        [
+          60.25,
+          29.25
+        ],
+        [
+          130.75,
+          29.25
+        ]
+      ],
+      "calibration_known_mm": 50.0,
+      "version": 17
+    },
+    "long_px": 111.0,
+    "short_px": 83.0,
+    "long_mm": 78.72340425531915,
+    "short_mm": 58.86524822695036,
+    "source_response_crc32": 2675898080,
+    "pixels_npz_sha256": "33fb34d1302edd1d6db1e0722685cb19845cf8fcece18bbe7e4ce79dd831163c",
+    "measurement_overlay_sha256": "ab28d656c904fb396c76fb7e1b39a39164b67589604d16ac3427c8b422ab7cb7",
+    "contour_area_px2": 6821.0,
+    "contour_touches_boundary": false
+  },
+  "calibration_and_accuracy_check": "evidence/provenance/part_measurement/physical_measurement_qa.json",
+  "rectangle_error_mm": [
+    2.5531914893617014,
+    2.6950354609929086
+  ],
+  "screenshot": {
+    "path": "evidence/provenance/part_measurement/h_part_live_original.jpg",
+    "sha256": "82f415c7e4e741d1c6c21bd791b10015b4e49d64592bb8597bc54c702bd1b442",
+    "unmodified": true,
+    "published": false
+  },
+  "live_session": "output/uart_live/session_20261103_061909_79b28f3d",
+  "running_at_observation": true,
+  "final_session_result_not_yet_written": true,
+  "scope": "Actual completed frame plus live UI observation; no final session totals asserted.",
+  "source_sha256": {
+    "software/part_measurement.py": "6156f7b9c5e5afe7f3898c5bf2fb74aec706fa392fd5083fd3c826800a57c4a3",
+    "software/uart_live_demo.py": "658d4a5951301082b3f727fc642a552b0cd01f42b9b87d359d2d5a9400187369",
+    "scripts/check_part_measurement.py": "f3f0306eea2349862485399f6443f15b6501342c1d45d0d43b99331ee150fe16",
+    "scripts/check_part_measurement_gui.py": "1c17814fd88b6385a2ad24498311d9422ddad10b560581302f3897a97119e8b1",
+    "scripts/test_part_measurement_hardware.py": "4022565b93c90c47ace5b9bdd36855bad87ec7edc7d1ec91d61d69d118c7692a"
+  },
+  "fpga_firmware_changed": false,
+  "sd_or_flash_written": false,
+  "frozen_v5_or_remote_changed": false
+}

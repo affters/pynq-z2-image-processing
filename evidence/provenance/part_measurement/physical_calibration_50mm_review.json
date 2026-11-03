@@ -1,0 +1,609 @@
+{
+  "schema_version": 1,
+  "review_started_utc": "2026-11-03T06:46:59.930636+00:00",
+  "review_completed_utc": "2026-11-03T06:47:00.101517+00:00",
+  "review_completed_china_time": "2026-11-03T14:47:00.101517+08:00",
+  "scope": "point_in_time_first_30_complete_contiguous_version15_measurement_records",
+  "session": "output/uart_live/session_20261103_061909_79b28f3d",
+  "settings_version": 15,
+  "selection_rule": "First 30 fully readable version15 records in ascending frame order, including every status; not selected by successful measurements or closeness to nominal.",
+  "reviewed_range": [
+    1249,
+    1278
+  ],
+  "reviewed_records": 30,
+  "status_counts": {
+    "ok": 27,
+    "truncated": 3
+  },
+  "unreadable_records_encountered": [],
+  "final_session_count_claimed": false,
+  "final_result_file_present_at_review": false,
+  "live_point_in_time": true,
+  "no_device_access": true,
+  "no_source_or_document_edits": true,
+  "physical_accuracy_pass": false,
+  "certified_accuracy_claimed": false,
+  "calibration": {
+    "independent_baseline_user_confirmed": true,
+    "user_confirmation": "User confirmed via main process that the upper line was measured with a ruler as 50 mm on the same sheet.",
+    "known_length_mm": 50.0,
+    "points": [
+      [
+        60.25,
+        29.25
+      ],
+      [
+        130.75,
+        29.25
+      ]
+    ],
+    "pixel_distance": 70.5,
+    "mm_per_pixel": 0.7092198581560284,
+    "all_30_settings_equal_reference": true,
+    "all_30_scale_and_conversions_consistent": true,
+    "settings": {
+      "enabled": true,
+      "threshold": 22,
+      "min_area": 80.0,
+      "close_gaps": false,
+      "roi": [
+        56,
+        50,
+        123,
+        92
+      ],
+      "mm_per_pixel": 0.7092198581560284,
+      "calibration_points": [
+        [
+          60.25,
+          29.25
+        ],
+        [
+          130.75,
+          29.25
+        ]
+      ],
+      "calibration_known_mm": 50.0,
+      "version": 15
+    },
+    "baseline_itself_used_as_accuracy_test": false,
+    "note": "The 50 mm reference sets scale only; measurement comparisons use the separate user-stated nominal rectangle 40 x 20 mm."
+  },
+  "dimension_statistics_over_status_ok": {
+    "long_px": {
+      "count": 27,
+      "minimum": 60.0,
+      "maximum": 60.0,
+      "median": 60.0
+    },
+    "short_px": {
+      "count": 27,
+      "minimum": 32.0,
+      "maximum": 32.0,
+      "median": 32.0
+    },
+    "long_mm": {
+      "count": 27,
+      "minimum": 42.5531914893617,
+      "maximum": 42.5531914893617,
+      "median": 42.5531914893617
+    },
+    "short_mm": {
+      "count": 27,
+      "minimum": 22.69503546099291,
+      "maximum": 22.69503546099291,
+      "median": 22.69503546099291
+    }
+  },
+  "comparison_to_user_nominal_rectangle": {
+    "long_side": {
+      "user_nominal_mm": 40.0,
+      "count": 27,
+      "absolute_difference_mm": {
+        "minimum": 2.5531914893617014,
+        "maximum": 2.5531914893617014,
+        "median": 2.5531914893617014
+      },
+      "relative_difference_percent": {
+        "minimum": 6.382978723404253,
+        "maximum": 6.382978723404253,
+        "median": 6.382978723404253
+      }
+    },
+    "short_side": {
+      "user_nominal_mm": 20.0,
+      "count": 27,
+      "absolute_difference_mm": {
+        "minimum": 2.6950354609929086,
+        "maximum": 2.6950354609929086,
+        "median": 2.6950354609929086
+      },
+      "relative_difference_percent": {
+        "minimum": 13.475177304964541,
+        "maximum": 13.475177304964541,
+        "median": 13.475177304964541
+      }
+    }
+  },
+  "reference_frame1271": {
+    "path": "output/uart_live/session_20261103_061909_79b28f3d/frame001271_mode2/measurement.json",
+    "sha256": "800add09a02196b45ce99d2440b767d6deaec3846213cd999011e87baf056659",
+    "long_px": 60.0,
+    "short_px": 32.0,
+    "long_mm": 42.5531914893617,
+    "short_mm": 22.69503546099291,
+    "long_abs_difference_mm": 2.5531914893617014,
+    "short_abs_difference_mm": 2.6950354609929086,
+    "long_relative_difference_percent": 6.382978723404253,
+    "short_relative_difference_percent": 13.475177304964541
+  },
+  "representative_raw_validation": {
+    "frame": 1271,
+    "raw_crc32": 966664553,
+    "measurement_and_metrics_crc_match": true,
+    "raw_actual_sha256": "8a7a6973721da2f8869266d688e5a0934c6fbe9be0c75385ecfaa5c925840c49",
+    "npz_sha256": "35c1ce9055d9b3c24af2e4604413bd4b8cfaf98d1774e283f36e445babf16765",
+    "actual_equals_expected": true,
+    "difference_nonzero_pixels": 0,
+    "saved_pngs_match_npz": true,
+    "metadata": {
+      "sequence": 3295317068,
+      "mode": 2,
+      "core_status": 2,
+      "response_crc32": 966664553,
+      "uart_roundtrip_seconds": 1.1625630000198726,
+      "request_payload_bytes": 147456,
+      "response_payload_bytes": 48260,
+      "frame": 1271,
+      "mode_name": "sobel",
+      "source_bgr_shape": [
+        480,
+        640,
+        3
+      ],
+      "input_rgb_shape": [
+        192,
+        256,
+        3
+      ],
+      "output_shape": [
+        190,
+        254
+      ],
+      "exact_match": true,
+      "mismatch_pixels": 0,
+      "max_abs_error": 0
+    },
+    "scope": "One representative raw frame; remaining rows reviewed as measurement JSON."
+  },
+  "limitations": [
+    "A 30-record live snapshot does not establish the final session total.",
+    "The independent 50 mm line was confirmed by the user; no external certification or ruler traceability claim is made.",
+    "The rectangle dimensions 40 x 20 mm are user-stated nominal dimensions; drawing width and Sobel outer-envelope definitions may differ.",
+    "This is one camera pose and plane; lens distortion, perspective, line width, manual endpoints and low pixel resolution remain error sources.",
+    "The reference line is used only for calibration, not as an independent accuracy result."
+  ],
+  "observed_frames": [
+    {
+      "frame": 1249,
+      "settings_version": 15,
+      "status": "ok",
+      "long_px": 60.0,
+      "short_px": 32.0,
+      "long_mm": 42.5531914893617,
+      "short_mm": 22.69503546099291,
+      "source_response_crc32": 3716684884,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001249_mode2/measurement.json",
+      "measurement_sha256": "e7164e4a6b20039aa6cc6edcd24478509605d8729dd6327d8f02dd8e58a6368a",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1250,
+      "settings_version": 15,
+      "status": "ok",
+      "long_px": 60.0,
+      "short_px": 32.0,
+      "long_mm": 42.5531914893617,
+      "short_mm": 22.69503546099291,
+      "source_response_crc32": 1029604606,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001250_mode2/measurement.json",
+      "measurement_sha256": "c10a26048e416e1a2518df7cec97d45654a1cbdb4ea7b27e02fa60394d07f279",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1251,
+      "settings_version": 15,
+      "status": "ok",
+      "long_px": 60.0,
+      "short_px": 32.0,
+      "long_mm": 42.5531914893617,
+      "short_mm": 22.69503546099291,
+      "source_response_crc32": 603250768,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001251_mode2/measurement.json",
+      "measurement_sha256": "7e202214c526e06ca7a14791763a5b7228045d2519f128762da6066396913150",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1252,
+      "settings_version": 15,
+      "status": "ok",
+      "long_px": 60.0,
+      "short_px": 32.0,
+      "long_mm": 42.5531914893617,
+      "short_mm": 22.69503546099291,
+      "source_response_crc32": 1395422499,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001252_mode2/measurement.json",
+      "measurement_sha256": "831b752dc3371f80646ab3c08d7c109c6172584b510432797b5a7e7596092a72",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1253,
+      "settings_version": 15,
+      "status": "truncated",
+      "long_px": null,
+      "short_px": null,
+      "long_mm": null,
+      "short_mm": null,
+      "source_response_crc32": 2441020310,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001253_mode2/measurement.json",
+      "measurement_sha256": "c59d48fc399366c303d1ad22905b6e28e3b954fc243ad95e8ce625b7582e2221",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1254,
+      "settings_version": 15,
+      "status": "ok",
+      "long_px": 60.0,
+      "short_px": 32.0,
+      "long_mm": 42.5531914893617,
+      "short_mm": 22.69503546099291,
+      "source_response_crc32": 328277254,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001254_mode2/measurement.json",
+      "measurement_sha256": "631e2bcd8b31dfacc8f3d325d9a48efe68e70f1a123d2afda8aa8e9964f39e49",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1255,
+      "settings_version": 15,
+      "status": "ok",
+      "long_px": 60.0,
+      "short_px": 32.0,
+      "long_mm": 42.5531914893617,
+      "short_mm": 22.69503546099291,
+      "source_response_crc32": 2817827729,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001255_mode2/measurement.json",
+      "measurement_sha256": "2731b6443b40374fc18b06e1b4077e8aff36b66ff32434e4851138c1041f9d72",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1256,
+      "settings_version": 15,
+      "status": "ok",
+      "long_px": 60.0,
+      "short_px": 32.0,
+      "long_mm": 42.5531914893617,
+      "short_mm": 22.69503546099291,
+      "source_response_crc32": 1360706303,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001256_mode2/measurement.json",
+      "measurement_sha256": "cf0d1c58c499b0d73616369790d93e48ed154c7d70026f57e0d9f4f682132364",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1257,
+      "settings_version": 15,
+      "status": "ok",
+      "long_px": 60.0,
+      "short_px": 32.0,
+      "long_mm": 42.5531914893617,
+      "short_mm": 22.69503546099291,
+      "source_response_crc32": 1041766835,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001257_mode2/measurement.json",
+      "measurement_sha256": "41551a48b34197c96276d80d1c1c9a5921c4cd162de5ec693a7dd7fd20428db4",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1258,
+      "settings_version": 15,
+      "status": "ok",
+      "long_px": 60.0,
+      "short_px": 32.0,
+      "long_mm": 42.5531914893617,
+      "short_mm": 22.69503546099291,
+      "source_response_crc32": 2209444264,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001258_mode2/measurement.json",
+      "measurement_sha256": "82d12f921c04a3d187d04dd9033deaee1237ef692efae450d48e9e6b2fbb8499",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1259,
+      "settings_version": 15,
+      "status": "ok",
+      "long_px": 60.0,
+      "short_px": 32.0,
+      "long_mm": 42.5531914893617,
+      "short_mm": 22.69503546099291,
+      "source_response_crc32": 2423639348,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001259_mode2/measurement.json",
+      "measurement_sha256": "0fb6c66cf9fca8958b43ee4ebbaf079ef6d05663f296218ca486723f475e5c48",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1260,
+      "settings_version": 15,
+      "status": "ok",
+      "long_px": 60.0,
+      "short_px": 32.0,
+      "long_mm": 42.5531914893617,
+      "short_mm": 22.69503546099291,
+      "source_response_crc32": 1178375451,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001260_mode2/measurement.json",
+      "measurement_sha256": "5b3d624b2999bbc33365a75dde50a923f0c0012c68d3395d5f3266cdd9fec813",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1261,
+      "settings_version": 15,
+      "status": "ok",
+      "long_px": 60.0,
+      "short_px": 32.0,
+      "long_mm": 42.5531914893617,
+      "short_mm": 22.69503546099291,
+      "source_response_crc32": 1155271901,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001261_mode2/measurement.json",
+      "measurement_sha256": "4c4b0b58b02fdb5cd9f432256f7a381ee67fdc22c45af557f7d85e139f894662",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1262,
+      "settings_version": 15,
+      "status": "ok",
+      "long_px": 60.0,
+      "short_px": 32.0,
+      "long_mm": 42.5531914893617,
+      "short_mm": 22.69503546099291,
+      "source_response_crc32": 37829595,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001262_mode2/measurement.json",
+      "measurement_sha256": "f6c3501bd51785c562a0c0ebd82753ebdf8419bf750438db88c33513bd406835",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1263,
+      "settings_version": 15,
+      "status": "truncated",
+      "long_px": null,
+      "short_px": null,
+      "long_mm": null,
+      "short_mm": null,
+      "source_response_crc32": 2571278842,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001263_mode2/measurement.json",
+      "measurement_sha256": "6773cd47ba3c210ab1960e06f59fcc34c8c878f8ab229f25933ccee471345d04",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1264,
+      "settings_version": 15,
+      "status": "ok",
+      "long_px": 60.0,
+      "short_px": 32.0,
+      "long_mm": 42.5531914893617,
+      "short_mm": 22.69503546099291,
+      "source_response_crc32": 2933982107,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001264_mode2/measurement.json",
+      "measurement_sha256": "225b8fb7d4d2eda2744306ecf8dc318d614f6eeaf8ec269e6c3b8ed923e4a842",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1265,
+      "settings_version": 15,
+      "status": "ok",
+      "long_px": 60.0,
+      "short_px": 32.0,
+      "long_mm": 42.5531914893617,
+      "short_mm": 22.69503546099291,
+      "source_response_crc32": 3896086793,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001265_mode2/measurement.json",
+      "measurement_sha256": "2d7f27f1a6e32aec51f3d06429edd11765b6650cd0f1c361b5e5a88ddaf0602b",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1266,
+      "settings_version": 15,
+      "status": "ok",
+      "long_px": 60.0,
+      "short_px": 32.0,
+      "long_mm": 42.5531914893617,
+      "short_mm": 22.69503546099291,
+      "source_response_crc32": 3347387104,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001266_mode2/measurement.json",
+      "measurement_sha256": "295baf938235422d38479a58127662b8ffb30153251fd7c07366a56419805391",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1267,
+      "settings_version": 15,
+      "status": "ok",
+      "long_px": 60.0,
+      "short_px": 32.0,
+      "long_mm": 42.5531914893617,
+      "short_mm": 22.69503546099291,
+      "source_response_crc32": 2965795780,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001267_mode2/measurement.json",
+      "measurement_sha256": "f4e823cfbe1ed92233186a38a77d7175c8b7d4090242ec776af4b854ff292883",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1268,
+      "settings_version": 15,
+      "status": "ok",
+      "long_px": 60.0,
+      "short_px": 32.0,
+      "long_mm": 42.5531914893617,
+      "short_mm": 22.69503546099291,
+      "source_response_crc32": 84388536,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001268_mode2/measurement.json",
+      "measurement_sha256": "728e315b4726364a6121b7408c4bee550cd101cde00a34081f83827563ae0a95",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1269,
+      "settings_version": 15,
+      "status": "ok",
+      "long_px": 60.0,
+      "short_px": 32.0,
+      "long_mm": 42.5531914893617,
+      "short_mm": 22.69503546099291,
+      "source_response_crc32": 407719252,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001269_mode2/measurement.json",
+      "measurement_sha256": "d1616d22635dc32c8a4cb395c876e71d346f9ea9c59e09d2f79e352760635ad4",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1270,
+      "settings_version": 15,
+      "status": "ok",
+      "long_px": 60.0,
+      "short_px": 32.0,
+      "long_mm": 42.5531914893617,
+      "short_mm": 22.69503546099291,
+      "source_response_crc32": 1314913379,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001270_mode2/measurement.json",
+      "measurement_sha256": "23d4b55344768e09d66c042d449c9f3e74928254fe0344e872dd4e9b242a0707",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1271,
+      "settings_version": 15,
+      "status": "ok",
+      "long_px": 60.0,
+      "short_px": 32.0,
+      "long_mm": 42.5531914893617,
+      "short_mm": 22.69503546099291,
+      "source_response_crc32": 966664553,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001271_mode2/measurement.json",
+      "measurement_sha256": "800add09a02196b45ce99d2440b767d6deaec3846213cd999011e87baf056659",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1272,
+      "settings_version": 15,
+      "status": "ok",
+      "long_px": 60.0,
+      "short_px": 32.0,
+      "long_mm": 42.5531914893617,
+      "short_mm": 22.69503546099291,
+      "source_response_crc32": 914085519,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001272_mode2/measurement.json",
+      "measurement_sha256": "720ef349036508798b24af0e932026a498742849e7c5ff425df6a7af8a641954",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1273,
+      "settings_version": 15,
+      "status": "ok",
+      "long_px": 60.0,
+      "short_px": 32.0,
+      "long_mm": 42.5531914893617,
+      "short_mm": 22.69503546099291,
+      "source_response_crc32": 2183450222,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001273_mode2/measurement.json",
+      "measurement_sha256": "584348d5c8b5d0c45e7fa9c0373e9a43638ae7d515f0dcba658500a94c16e049",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1274,
+      "settings_version": 15,
+      "status": "truncated",
+      "long_px": null,
+      "short_px": null,
+      "long_mm": null,
+      "short_mm": null,
+      "source_response_crc32": 938824444,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001274_mode2/measurement.json",
+      "measurement_sha256": "ec2a18046d4f731061600c85164efaf4867138de4e40e41b8444d31b51df666c",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1275,
+      "settings_version": 15,
+      "status": "ok",
+      "long_px": 60.0,
+      "short_px": 32.0,
+      "long_mm": 42.5531914893617,
+      "short_mm": 22.69503546099291,
+      "source_response_crc32": 4122852815,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001275_mode2/measurement.json",
+      "measurement_sha256": "0da421f08e7b13f4bb6e5601308d877be5a3d5d0133d4dc8ee41790dae72274a",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1276,
+      "settings_version": 15,
+      "status": "ok",
+      "long_px": 60.0,
+      "short_px": 32.0,
+      "long_mm": 42.5531914893617,
+      "short_mm": 22.69503546099291,
+      "source_response_crc32": 669884762,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001276_mode2/measurement.json",
+      "measurement_sha256": "e109735d59d830188f89f2fb1aba06c639fd983c18340769fd4370aa51b5b2a3",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1277,
+      "settings_version": 15,
+      "status": "ok",
+      "long_px": 60.0,
+      "short_px": 32.0,
+      "long_mm": 42.5531914893617,
+      "short_mm": 22.69503546099291,
+      "source_response_crc32": 2385215176,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001277_mode2/measurement.json",
+      "measurement_sha256": "14274a22d46af2d7b63118621fb12d4e01f0690976c4ca107d54f250db9124a0",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    },
+    {
+      "frame": 1278,
+      "settings_version": 15,
+      "status": "ok",
+      "long_px": 60.0,
+      "short_px": 32.0,
+      "long_mm": 42.5531914893617,
+      "short_mm": 22.69503546099291,
+      "source_response_crc32": 3391503195,
+      "measurement_json": "output/uart_live/session_20261103_061909_79b28f3d/frame001278_mode2/measurement.json",
+      "measurement_sha256": "b2cd98518a0e14d2179afe93dd9e1afd3260301166c8e391d030072aa69fa2f5",
+      "settings_equal_reference": true,
+      "scale_and_conversion_consistent": true
+    }
+  ]
+}

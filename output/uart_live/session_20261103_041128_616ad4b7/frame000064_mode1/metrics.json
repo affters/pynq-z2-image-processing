@@ -1,0 +1,28 @@
+{
+  "sequence": 1801952886,
+  "mode": 1,
+  "core_status": 2,
+  "response_crc32": 55079759,
+  "uart_roundtrip_seconds": 1.1617428000026848,
+  "request_payload_bytes": 147456,
+  "response_payload_bytes": 48260,
+  "frame": 64,
+  "mode_name": "gaussian",
+  "source_bgr_shape": [
+    480,
+    640,
+    3
+  ],
+  "input_rgb_shape": [
+    192,
+    256,
+    3
+  ],
+  "output_shape": [
+    190,
+    254
+  ],
+  "exact_match": true,
+  "mismatch_pixels": 0,
+  "max_abs_error": 0
+}

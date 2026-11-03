@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "settings_version": 8,
+  "source": "verified_fpga_sobel",
+  "computation": "host",
+  "frame": 194,
+  "source_output_shape": [
+    190,
+    254
+  ],
+  "settings": {
+    "enabled": true,
+    "threshold": 15,
+    "min_area": 80.0,
+    "close_gaps": false,
+    "roi": [
+      58,
+      48,
+      143,
+      99
+    ],
+    "mm_per_pixel": 0.7396002616336389,
+    "calibration_points": [
+      [
+        123.25,
+        60.75
+      ],
+      [
+        124.75,
+        87.75
+      ]
+    ],
+    "calibration_known_mm": 20.0,
+    "version": 8
+  },
+  "result": {
+    "status": "ok",
+    "input_shape": [
+      190,
+      254
+    ],
+    "roi": [
+      58,
+      48,
+      143,
+      99
+    ],
+    "threshold": 15,
+    "min_area": 80.0,
+    "close_gaps": false,
+    "closing_kernel_size": 1,
+    "detected_contours": 3,
+    "eligible_contours": 1,
+    "selected_contour": {
+      "index": 1,
+      "point_count": 58,
+      "contour_area_px2": 346.0,
+      "touches_boundary": false,
+      "bounding_rect": [
+        64,
+        58,
+        62,
+        34
+      ]
+    },
+    "box_points": [
+      [
+        65.3092269897461,
+        91.18453979492188
+      ],
+      [
+        63.743141174316406,
+        59.86283874511719
+      ],
+      [
+        124.3416519165039,
+        56.832916259765625
+      ],
+      [
+        125.9077377319336,
+        88.15461730957031
+      ]
+    ],
+    "long_px": 60.67420959472656,
+    "short_px": 31.360824584960938,
+    "area_px2": 346.0,
+    "perimeter_px": 369.5979790687561,
+    "mm_per_pixel": 0.7396002616336389,
+    "long_mm": 44.87466129067401,
+    "short_mm": 23.194474068083764,
+    "measurement_location": "host_after_verified_fpga_sobel",
+    "method": "largest_external_contour_min_area_rectangle",
+    "scale_assumption": "uniform_same_plane_perpendicular_camera",
+    "precision_claim": "demonstration_only_no_accuracy_certificate"
+  },
+  "source_response_crc32": 3504310139
+}

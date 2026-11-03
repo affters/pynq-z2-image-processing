@@ -1,0 +1,35 @@
+{
+  "status": "no_contour",
+  "input_shape": [
+    190,
+    254
+  ],
+  "roi": [
+    0,
+    0,
+    254,
+    190
+  ],
+  "threshold": 40,
+  "min_area": 80.0,
+  "detected_contours": 0,
+  "eligible_contours": 0,
+  "selected_contour": null,
+  "box_points": null,
+  "long_px": null,
+  "short_px": null,
+  "area_px2": null,
+  "perimeter_px": null,
+  "mm_per_pixel": null,
+  "long_mm": null,
+  "short_mm": null,
+  "measurement_location": "host_after_verified_fpga_sobel",
+  "method": "largest_external_contour_min_area_rectangle",
+  "scale_assumption": "uniform_same_plane_perpendicular_camera",
+  "precision_claim": "demonstration_only_no_accuracy_certificate",
+  "physical_accuracy_verified": false,
+  "source": "verified_fpga_sobel",
+  "frame": 1,
+  "actual_sha256": "b3a36ed467bd7ed16b081ee7400ea5e38bb39545287a8a17bb8ac83fe82b3609",
+  "actual_response_crc32": 893722944
+}

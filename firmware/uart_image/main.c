@@ -14,8 +14,19 @@ typedef unsigned int u32;
 #define TXFULL 0x10u
 #define RX_ERRORS 0xE0u
 #define FRAME_POLL_BUDGET 50000000u
-#define RGB_BYTES 36864u
-#define PIXELS 12288u
+#ifndef IMAGE_WIDTH
+#define IMAGE_WIDTH 128u
+#endif
+#ifndef IMAGE_HEIGHT
+#define IMAGE_HEIGHT 96u
+#endif
+#if !((IMAGE_WIDTH == 128 && IMAGE_HEIGHT == 96) || \
+      (IMAGE_WIDTH == 256 && IMAGE_HEIGHT == 192))
+#error Unsupported image resolution profile
+#endif
+#define PIXELS (IMAGE_WIDTH * IMAGE_HEIGHT)
+#define RGB_BYTES (PIXELS * 3u)
+#define INNER_PIXELS ((IMAGE_WIDTH - 2u) * (IMAGE_HEIGHT - 2u))
 #define DMA_BASE 0x40400000u
 #define GPIO_BASE 0x41200000u
 #define INPUT_BASE 0x10000000u
@@ -57,7 +68,11 @@ static u8 gray_body[PIXELS];
 
 static const u8 request_magic[8] = {'P','Y','N','Q','I','M','G','1'};
 static const u8 response_magic[8] = {'P','Y','N','Q','R','E','S','1'};
+#if IMAGE_WIDTH == 128 && IMAGE_HEIGHT == 96
 static const u8 info_body[] = "pynq_uart_image_v1";
+#else
+static const u8 info_body[] = "pynq_uart_image_256x192_v1";
+#endif
 
 static u32 reg_read(u32 offset) { return *(volatile u32 *)(UART_BASE + offset); }
 static void reg_write(u32 offset, u32 value) { *(volatile u32 *)(UART_BASE + offset) = value; }
@@ -173,11 +188,11 @@ static int dma_reset(void)
 static u32 process_frame(u32 mode,u16 *out_width,u16 *out_height,u32 *core_status)
 {
     if (fw_dma_poisoned) return 4u;
-    u32 output_pixels=(mode==0u || mode==4u) ? PIXELS : 11844u;
+    u32 output_pixels=(mode==0u || mode==4u) ? PIXELS : INNER_PIXELS;
     volatile u32 *input=(volatile u32 *)INPUT_BASE;
     volatile u32 *output=(volatile u32 *)OUTPUT_BASE;
-    *out_width=(mode==0u || mode==4u) ? 128u : 126u;
-    *out_height=(mode==0u || mode==4u) ? 96u : 94u;
+    *out_width=(mode==0u || mode==4u) ? IMAGE_WIDTH : IMAGE_WIDTH-2u;
+    *out_height=(mode==0u || mode==4u) ? IMAGE_HEIGHT : IMAGE_HEIGHT-2u;
     *core_status=0u;
     for (u32 i=0; i<PIXELS; ++i)
         input[i]=((u32)rgb_body[i*3u]<<16)|((u32)rgb_body[i*3u+1u]<<8)|rgb_body[i*3u+2u];
@@ -277,9 +292,9 @@ int main(void)
         u32 length=get32(h+24), crc=get32(h+28);
         ++fw_request_count;
         if (command==1u && mode==0u && length==0u && crc==0u &&
-            ((width==0u && height==0u) || (width==128u && height==96u))) {
-            respond(sequence,0u,128u,96u,info_body,(u32)sizeof(info_body)-1u,0u);
-        } else if (command==2u && mode<5u && width==128u && height==96u && length==RGB_BYTES) {
+            ((width==0u && height==0u) || (width==IMAGE_WIDTH && height==IMAGE_HEIGHT))) {
+            respond(sequence,0u,IMAGE_WIDTH,IMAGE_HEIGHT,info_body,(u32)sizeof(info_body)-1u,0u);
+        } else if (command==2u && mode<5u && width==IMAGE_WIDTH && height==IMAGE_HEIGHT && length==RGB_BYTES) {
             u32 receive_budget=FRAME_POLL_BUDGET;
             for (i=0; i<RGB_BYTES; ++i) if (!uart_get(rgb_body+i,&receive_budget)) break;
             if (i!=RGB_BYTES) {

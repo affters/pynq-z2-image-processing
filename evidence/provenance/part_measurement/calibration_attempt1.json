@@ -1,0 +1,42 @@
+{
+  "recorded_utc": "2026-11-03T06:24:52.370066+00:00",
+  "measurement_path": "output\\uart_live\\session_20261103_061909_79b28f3d\\frame000194_mode2\\measurement.json",
+  "measurement_sha256": "268459dadd54a3cc9bbbbf56d222742a2a2486a43e42d4029f74834eefb9acf5",
+  "user_nominal_rectangle_mm": [
+    40,
+    20
+  ],
+  "settings": {
+    "enabled": true,
+    "threshold": 15,
+    "min_area": 80.0,
+    "close_gaps": false,
+    "roi": [
+      58,
+      48,
+      143,
+      99
+    ],
+    "mm_per_pixel": 0.7396002616336389,
+    "calibration_points": [
+      [
+        123.25,
+        60.75
+      ],
+      [
+        124.75,
+        87.75
+      ]
+    ],
+    "calibration_known_mm": 20.0,
+    "version": 8
+  },
+  "measured_outer_mm": [
+    44.87466129067401,
+    23.194474068083764
+  ],
+  "long_error_mm": 4.8746612906740125,
+  "long_relative_error_percent": 12.186653226685031,
+  "physical_accuracy_verified": false,
+  "note": "First manual baseline near pen-stroke endpoints; downstream measurement uses minimum outer rectangle. Preserve this result when correcting endpoint-definition mismatch."
+}

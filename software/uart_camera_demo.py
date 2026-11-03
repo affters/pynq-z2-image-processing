@@ -20,7 +20,7 @@ import numpy as np
 from PIL import Image
 
 from image_reference import MODES, process_reference
-from uart_image_client import BAUDRATES, FrameClient, HEIGHT, WIDTH
+from uart_image_client import BAUDRATES, FrameClient, HEIGHT, WIDTH, resolution_profile
 
 ROOT = Path(__file__).resolve().parents[1]
 CAMERA_VID = "0c45"
@@ -76,22 +76,30 @@ def anonymous_camera_metadata(devices, selected):
                 unique_device_paths_omitted=True)
 
 
-def read_camera_rgb(capture):
+def read_camera_rgb(capture, include_source=False, width=WIDTH, height=HEIGHT):
+    """Read one frame; optionally retain its original RGB for display only."""
     import cv2
+    width, height, _ = resolution_profile(width, height)
     ok, bgr = capture.read()
     if (not ok or bgr is None or bgr.dtype != np.uint8 or bgr.ndim != 3
             or bgr.shape[2] != 3 or min(bgr.shape[:2]) < 1):
         raise RuntimeError("Selected MF200 camera did not return a nonempty uint8 BGR frame")
     source_shape = list(bgr.shape)
-    resized = cv2.resize(bgr, (WIDTH, HEIGHT), interpolation=cv2.INTER_AREA)
+    resized = cv2.resize(bgr, (width, height), interpolation=cv2.INTER_AREA)
     rgb = cv2.cvtColor(resized, cv2.COLOR_BGR2RGB)
-    if rgb.shape != (HEIGHT, WIDTH, 3) or rgb.dtype != np.uint8:
+    if rgb.shape != (height, width, 3) or rgb.dtype != np.uint8:
         raise RuntimeError("Camera conversion produced an invalid fixed RGB input")
-    return np.ascontiguousarray(rgb), source_shape
+    fixed_rgb = np.ascontiguousarray(rgb)
+    if include_source:
+        source_rgb = np.ascontiguousarray(cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB))
+        return fixed_rgb, source_shape, source_rgb
+    return fixed_rgb, source_shape
 
 
-def open_selected_camera(camera_name="MF200 Camera", warmup_frames=20):
+def open_selected_camera(camera_name="MF200 Camera", warmup_frames=20,
+                         width=WIDTH, height=HEIGHT):
     import cv2
+    width, height, _ = resolution_profile(width, height)
     devices = enumerate_windows_cameras()
     selected = select_camera(devices, camera_name)
     capture = cv2.VideoCapture(selected["index"], cv2.CAP_DSHOW)
@@ -111,7 +119,7 @@ def open_selected_camera(camera_name="MF200 Camera", warmup_frames=20):
                 raise TimeoutError("MF200 warm-up did not complete within its deadline")
             attempts += 1
             try:
-                _, shape = read_camera_rgb(capture)
+                _, shape = read_camera_rgb(capture, width=width, height=height)
                 valid += 1
             except RuntimeError:
                 continue
@@ -121,7 +129,7 @@ def open_selected_camera(camera_name="MF200 Camera", warmup_frames=20):
             raise RuntimeError("Camera inventory changed during setup; refusing an ambiguous device")
         metadata = anonymous_camera_metadata(devices, selected)
         metadata.update(backend="DSHOW", warmup_frames=valid,
-                        source_bgr_shape=shape, processed_rgb_shape=[HEIGHT, WIDTH, 3],
+                        source_bgr_shape=shape, processed_rgb_shape=[height, width, 3],
                         resize="OpenCV INTER_AREA", conversion="BGR to RGB")
         return capture, metadata
     except Exception:
@@ -159,10 +167,16 @@ def main(argv=None):
     parser.add_argument("--baud", type=int, choices=BAUDRATES, default=115200)
     parser.add_argument("--timeout", type=float, default=20.0)
     parser.add_argument("--camera-name", default="MF200 Camera")
+    parser.add_argument("--width", type=int, default=WIDTH)
+    parser.add_argument("--height", type=int, default=HEIGHT)
     parser.add_argument("--frames", type=int, choices=(1, 2), default=2)
     parser.add_argument("--mode", choices=["all"] + [str(mode) for mode in MODES], default="all")
     parser.add_argument("--output", type=Path)
     args = parser.parse_args(argv)
+    try:
+        args.width, args.height, _ = resolution_profile(args.width, args.height)
+    except ValueError as exc:
+        parser.error(str(exc))
     directory = create_result_directory(args.output)
     modes = list(MODES) if args.mode == "all" else [int(args.mode)]
     planned = args.frames * len(modes)
@@ -174,15 +188,16 @@ def main(argv=None):
                   timing_note="UART roundtrip includes serial transfer and board processing, not PL latency; camera capture/reference/display are separate.")
     capture = client = None
     try:
-        client = FrameClient(args.port, baudrate=args.baud, timeout=args.timeout)
+        client = FrameClient(args.port, baudrate=args.baud, timeout=args.timeout,
+                             width=args.width, height=args.height)
         client.open()
         result.update(firmware_info=client.firmware_info, info_handshake_passed=True)
-        capture, camera = open_selected_camera(args.camera_name)
+        capture, camera = open_selected_camera(args.camera_name, width=args.width, height=args.height)
         result["camera"] = camera
         result["camera_capture_test"] = True
         for index in range(args.frames):
             capture_started = time.perf_counter()
-            rgb, shape = read_camera_rgb(capture)
+            rgb, shape = read_camera_rgb(capture, width=args.width, height=args.height)
             capture_seconds = time.perf_counter() - capture_started
             for mode in modes:
                 reference_started = time.perf_counter()

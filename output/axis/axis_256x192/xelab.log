@@ -1,0 +1,17 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: E:/sailingsi/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe tb_image_case -s axis_sim -mt 2 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.rgb_to_gray
+Compiling module work.gray_filter_3x3(IMAGE_WIDTH=256,...
+Compiling module work.frame_equalize(IMAGE_WIDTH=256,I...
+Compiling module work.image_axis_core(IMAGE_WIDTH=256,...
+Compiling module work.tb_image_axis_core(IMAGE_WIDTH=2...
+Compiling module work.tb_image_case
+Built simulation snapshot axis_sim

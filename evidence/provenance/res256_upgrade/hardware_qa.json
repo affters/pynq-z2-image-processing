@@ -1,0 +1,91 @@
+{
+  "created_utc": "2026-11-03T04:25:31.189039+00:00",
+  "profile": [
+    256,
+    192
+  ],
+  "hardware_info": "pynq_uart_image_256x192_v1",
+  "hardware_build": "output/image_system_256x192/build_20261103_034450_utc_787ac48d",
+  "firmware_build": "output/uart_firmware/build_20261103_034121_utc_0bc11cf3",
+  "programming_record": "output/uart_firmware/build_20261103_034121_utc_0bc11cf3/hardware_20261103_040821_utc_68d1d4c6",
+  "batch": [
+    {
+      "path": "output/uart_resolution/run_20261103_040835_utc_582b2e12/result.json",
+      "sha256": "4b34128f78e96c132831068caf494d07ec7d03b86f454dee23463f31b374d2fb",
+      "source": "info_only",
+      "verified_frames": 0,
+      "output_pixels": 0
+    },
+    {
+      "path": "output/uart_resolution/run_20261103_040847_utc_36f0b431/result.json",
+      "sha256": "41ff3de67b1195489e9b879d27d25eec10742f17a42567dc885a466fa28d2751",
+      "source": "fixed_rgb",
+      "verified_frames": 1,
+      "output_pixels": 49152
+    },
+    {
+      "path": "output/uart_resolution/run_20261103_040921_utc_e4ddd36f/result.json",
+      "sha256": "8fbf41e5de462b722624f374794f474710a753bfbce5418cf666bbb5ffbcce6c",
+      "source": "fixed_rgb",
+      "verified_frames": 10,
+      "output_pixels": 486168
+    },
+    {
+      "path": "output/uart_resolution/run_20261103_041022_utc_a5050e45/result.json",
+      "sha256": "9b4ff9a4dee5ffc44c40edfb4c1ab2a15243e16460083d96ac1ecb6147e7cebf",
+      "source": "camera_rgb",
+      "verified_frames": 10,
+      "output_pixels": 486168
+    }
+  ],
+  "gui_completed": {
+    "path": "output/uart_live/session_20261103_041128_616ad4b7/result.json",
+    "sha256": "d847d1a708f8f08f80d40004d05aa8189585d04d9932ac5c4338c7edfffc5528",
+    "frames": 348,
+    "modes": {
+      "0": 64,
+      "1": 90,
+      "2": 71,
+      "3": 53,
+      "4": 70
+    },
+    "output_pixels": 16914008,
+    "all_exact": true,
+    "all_modes_verified": true,
+    "cleanup_errors": [],
+    "error": null,
+    "median_verified_fps": 0.8460261536131102
+  },
+  "live_observation": {
+    "session": "output/uart_live/session_20261103_042144_094634dd",
+    "selected_mode": 3,
+    "observed_frame_index": 131,
+    "running": true,
+    "final_result_not_yet_written": true,
+    "scope": "Point-in-time UI observation; excluded from completed 348-frame result."
+  },
+  "screenshots": [
+    {
+      "path": "evidence/provenance/res256_upgrade/gui_256_gray_original.jpg",
+      "sha256": "c313e37a26b8b21da662f284a8c985652aaa0f0f53a3931b235443c6fecd12ba",
+      "unmodified_local_evidence": true,
+      "published": false
+    },
+    {
+      "path": "evidence/provenance/res256_upgrade/gui_256_sharp_original.jpg",
+      "sha256": "8ce76dd31d6a7ed8ec9186acc0140f78c8cb6937adf01ff2085ecf9a0f74ff24",
+      "unmodified_local_evidence": true,
+      "published": false
+    },
+    {
+      "path": "evidence/provenance/res256_upgrade/gui_256_sharp_restarted_original.jpg",
+      "sha256": "3519b4d20d2e5f916875131099af3034631e2073517a4c16c0d8ec96a7edfbbd",
+      "unmodified_local_evidence": true,
+      "published": false
+    }
+  ],
+  "sd_written": false,
+  "flash_written": false,
+  "frozen_v5_changed": false,
+  "remote_changed": false
+}

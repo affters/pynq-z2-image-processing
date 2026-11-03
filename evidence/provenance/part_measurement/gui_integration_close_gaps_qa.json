@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "created_utc": "2026-11-03T06:13:57.141497+00:00",
+  "hardware_access": false,
+  "gui_window_created": false,
+  "source_file": "software/uart_live_demo.py",
+  "source_sha256": "658d4a5951301082b3f727fc642a552b0cd01f42b9b87d359d2d5a9400187369",
+  "scope": "Production GUI worker/render/callback methods with synthetic arrays and stubs; no device or Tk window. Does not validate real-camera measurement accuracy.",
+  "checks": [
+    "254x190_scale2_centered_coordinate_mapping",
+    "126x94_scale4_centered_coordinate_mapping",
+    "settings_snapshot_independent",
+    "worker_verified_sobel_saves_distinct_overlay_and_json_preserves_raw",
+    "worker_mismatch_never_measures_and_releases",
+    "worker_geometry_fault_releases",
+    "worker_completed_mode_not_changed_selector",
+    "renderer_stale_settings_suppresses_old_measurement",
+    "gap_connection_toggle_snapshot_and_worker_argument",
+    "calibration_two_point_and_reset_geometry",
+    "invalid_known_length_clears_previous_scale",
+    "too_short_calibration_line_rejected",
+    "reverse_drag_normalized_exclusive_roi",
+    "outside_image_point_rejected"
+  ]
+}

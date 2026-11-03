@@ -1,0 +1,92 @@
+{
+  "version": "v6_20261103",
+  "base_manifest_sha256": "d4e90821078d234ec94f93506733131c726ac51de81b705e6d5a21684738cfbb",
+  "resolution_batches": [
+    "output/uart_resolution/run_20261103_040835_utc_582b2e12",
+    "output/uart_resolution/run_20261103_040847_utc_36f0b431",
+    "output/uart_resolution/run_20261103_040921_utc_e4ddd36f",
+    "output/uart_resolution/run_20261103_041022_utc_a5050e45"
+  ],
+  "digital_measurement_batch": "output/part_measurement/run_20261103_054519_utc_cf9eb476",
+  "gui_samples": [
+    {
+      "session": "session_20261103_041128_616ad4b7",
+      "frame": 0,
+      "mode": 0,
+      "directory": "output/uart_live/session_20261103_041128_616ad4b7/frame000000_mode0"
+    },
+    {
+      "session": "session_20261103_041128_616ad4b7",
+      "frame": 64,
+      "mode": 1,
+      "directory": "output/uart_live/session_20261103_041128_616ad4b7/frame000064_mode1"
+    },
+    {
+      "session": "session_20261103_041128_616ad4b7",
+      "frame": 154,
+      "mode": 2,
+      "directory": "output/uart_live/session_20261103_041128_616ad4b7/frame000154_mode2"
+    },
+    {
+      "session": "session_20261103_041128_616ad4b7",
+      "frame": 225,
+      "mode": 3,
+      "directory": "output/uart_live/session_20261103_041128_616ad4b7/frame000225_mode3"
+    },
+    {
+      "session": "session_20261103_041128_616ad4b7",
+      "frame": 278,
+      "mode": 4,
+      "directory": "output/uart_live/session_20261103_041128_616ad4b7/frame000278_mode4"
+    },
+    {
+      "session": "session_20261103_061909_79b28f3d",
+      "frame": 194,
+      "mode": 2,
+      "directory": "output/uart_live/session_20261103_061909_79b28f3d/frame000194_mode2"
+    },
+    {
+      "session": "session_20261103_061909_79b28f3d",
+      "frame": 1271,
+      "mode": 2,
+      "directory": "output/uart_live/session_20261103_061909_79b28f3d/frame001271_mode2"
+    },
+    {
+      "session": "session_20261103_061909_79b28f3d",
+      "frame": 1881,
+      "mode": 2,
+      "directory": "output/uart_live/session_20261103_061909_79b28f3d/frame001881_mode2"
+    }
+  ],
+  "gui_complete_summaries": [
+    "output/uart_live/session_20261103_041128_616ad4b7",
+    "output/uart_live/session_20261103_054712_2307f7b6",
+    "output/uart_live/session_20261103_061909_79b28f3d"
+  ],
+  "complete_gui_raw_archive_included": false,
+  "measurement_session_final_count": 2690,
+  "measurement_geometry_status_counts": {
+    "ok": 1867,
+    "truncated": 735,
+    "no_contour": 88
+  },
+  "measurement_count_is_not_accuracy_count": true,
+  "selected_physical_frames": [
+    194,
+    1271,
+    1881
+  ],
+  "hardware_access_in_packaging": false,
+  "previous_source_snapshots": [
+    "evidence/previous_source_v5/firmware/uart_image/main.c",
+    "evidence/previous_source_v5/software/uart_image_client.py",
+    "evidence/previous_source_v5/scripts/build_uart_firmware.ps1",
+    "evidence/previous_source_v5/scripts/program_uart_firmware.ps1"
+  ],
+  "visible_chat_snapshot_unchanged": true,
+  "new_chat_export_added": false,
+  "approved_screenshots": [
+    "evidence/provenance/part_measurement/h_part_live_original.jpg",
+    "evidence/provenance/part_measurement/calibration_50mm_original.jpg"
+  ]
+}

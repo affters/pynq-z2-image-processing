@@ -1,0 +1,37 @@
+{
+  "part": "xc7z020clg400-1",
+  "tool_version": "2020.2",
+  "fabric_clock_hz": 50000000,
+  "image_width": 256,
+  "image_height": 192,
+  "stage_path": "C:/Users/[user]\\AppData\\Local\\Temp\\codex_pfga_image_system_f18ae1dc628f419eb038f1a5e7abbe11",
+  "ps7_preset_source": "https://github.com/Xilinx/PYNQ/blob/v2.7.0/boards/Pynq-Z2/petalinux_bsp/hardware_project/pynqz2.tcl",
+  "ps7_preset_git_blob": "dd415eac9a19aeb5ec9341718c47a68f76204544",
+  "ps7_preset_upstream_sha256": "0c193c72fcf504ce432d4866870b08d06e8dd88410125fe7b23aae8ee256147c",
+  "inputs": [
+    {
+      "name": "frame_equalize.v",
+      "sha256": "b52c937f8b89d91010024eb8fbbe0311eca4415ebb3b1c6b6e9aed7873726e00"
+    },
+    {
+      "name": "gray_filter_3x3.v",
+      "sha256": "4d21529a91e88e195c5216d84aa7de47c053ee16f88050d3ff20e9dc2459e66a"
+    },
+    {
+      "name": "image_axis_core.v",
+      "sha256": "099f19a094354cef42346ff747b0a0ff68b1906c9c070bbaa9f7367e368d09ba"
+    },
+    {
+      "name": "rgb_to_gray.v",
+      "sha256": "c0b640d1cdff359abd8f487101971777d3ee0583d3137203c23e57045d4f01c3"
+    },
+    {
+      "name": "build_image_system.tcl",
+      "sha256": "3baad6d0c3ecbbb29ce23594ea8aecfb279c22aa869c491507d9f09f7066d3c6"
+    },
+    {
+      "name": "image_system.xdc",
+      "sha256": "5d30a40db16aea9fac6468cda44cfb2feb63900a3f963e35b89c5b4af4759737"
+    }
+  ]
+}

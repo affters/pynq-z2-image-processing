@@ -1,0 +1,22 @@
+{
+  "all_passed": true,
+  "hardware_access": false,
+  "fixture_hardware_never_programmed": true,
+  "firmware_128": "output\\uart_firmware\\build_20261103_034121_utc_c1dec189",
+  "firmware_256": "output\\uart_firmware\\build_20261103_034121_utc_0bc11cf3",
+  "checks": [
+    "default_128_elf_byte_identical",
+    "default_legacy_pinned_pair",
+    "nondefault_requires_explicit_hardware",
+    "unsupported_or_mixed_geometry_rejected",
+    "manifest_bound_256_fixture_pair",
+    "manifest_geometry_mismatch_rejected",
+    "incomplete_implementation_rejected",
+    "changed_artifact_rejected",
+    "hashed_but_wrong_hwh_geometry_rejected",
+    "hashed_but_changed_ps_initialization_rejected",
+    "elf_profile_identity_mismatch_rejected"
+  ],
+  "elf_128_sha256": "f60d7dbdb7d0983e76acd46ed0aa59d28410240864cf7678bd51dda9fa788328",
+  "elf_256_sha256": "9fb1becf183c475f5228062d576ecd684e0342af231dbcc24c090a6b1fc42ac9"
+}

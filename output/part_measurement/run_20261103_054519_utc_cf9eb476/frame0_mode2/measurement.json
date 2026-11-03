@@ -1,0 +1,63 @@
+{
+  "status": "ok",
+  "input_shape": [
+    190,
+    254
+  ],
+  "roi": [
+    0,
+    0,
+    254,
+    190
+  ],
+  "threshold": 40,
+  "min_area": 80.0,
+  "detected_contours": 1,
+  "eligible_contours": 1,
+  "selected_contour": {
+    "index": 0,
+    "point_count": 4,
+    "contour_area_px2": 8385.0,
+    "touches_boundary": false,
+    "bounding_rect": [
+      62,
+      62,
+      130,
+      66
+    ]
+  },
+  "box_points": [
+    [
+      191.0,
+      127.0
+    ],
+    [
+      62.0,
+      127.0
+    ],
+    [
+      62.0,
+      62.0
+    ],
+    [
+      191.0,
+      62.0
+    ]
+  ],
+  "long_px": 129.0,
+  "short_px": 65.0,
+  "area_px2": 8385.0,
+  "perimeter_px": 388.0,
+  "mm_per_pixel": null,
+  "long_mm": null,
+  "short_mm": null,
+  "measurement_location": "host_after_verified_fpga_sobel",
+  "method": "largest_external_contour_min_area_rectangle",
+  "scale_assumption": "uniform_same_plane_perpendicular_camera",
+  "precision_claim": "demonstration_only_no_accuracy_certificate",
+  "physical_accuracy_verified": false,
+  "source": "verified_fpga_sobel",
+  "frame": 0,
+  "actual_sha256": "d618db299f958989b516495ad9905d2198cc3ee1bfbdc951021ba94ec49b3071",
+  "actual_response_crc32": 4098600984
+}

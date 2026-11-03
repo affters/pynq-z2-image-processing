@@ -138,11 +138,12 @@
         "link.ld": "9ca42b3aacb374917761e30a2c4469d4cc763b79163b477b2ab918e22d615245"
       },
       "verified_main_source": {
-        "path": "firmware/uart_image/main.c",
+        "path": "evidence/previous_source_v5/firmware/uart_image/main.c",
         "sha256": "918f68b333cc2412cee22bf083ddc54c3354eaf519ed7ab80cfe18a794fa32fa",
         "bytes": 10276,
         "source_original_sha256": "918f68b333cc2412cee22bf083ddc54c3354eaf519ed7ab80cfe18a794fa32fa",
-        "source_original_bytes": 10276
+        "source_original_bytes": 10276,
+        "v5_package_path": "firmware/uart_image/main.c"
       },
       "loader_preflight": {
         "path": "output/uart_firmware/build_20261101_015010_utc_b719be66/hardware_20261101_015458_utc_b9cf8951/preflight.json",
@@ -1526,11 +1527,12 @@
   "source_and_method_provenance": {
     "supporting_current_files": {
       "software/uart_image_client.py": {
-        "path": "software/uart_image_client.py",
+        "path": "evidence/previous_source_v5/software/uart_image_client.py",
         "sha256": "5928d940d8cf40f6f9d8ee90f15a64a9c67930fff7b623bdde7305e91d125936",
         "bytes": 10713,
         "source_original_sha256": "5928d940d8cf40f6f9d8ee90f15a64a9c67930fff7b623bdde7305e91d125936",
-        "source_original_bytes": 10713
+        "source_original_bytes": 10713,
+        "v5_package_path": "software/uart_image_client.py"
       },
       "software/uart_image_demo.py": {
         "path": "software/uart_image_demo.py",
@@ -1547,18 +1549,20 @@
         "source_original_bytes": 1901
       },
       "scripts/build_uart_firmware.ps1": {
-        "path": "scripts/build_uart_firmware.ps1",
+        "path": "evidence/previous_source_v5/scripts/build_uart_firmware.ps1",
         "sha256": "a26fc9f2b6b54fe1e063dc046d3390605ec4199f164ae0f32fe9c3775dc5c007",
         "bytes": 2704,
         "source_original_sha256": "a26fc9f2b6b54fe1e063dc046d3390605ec4199f164ae0f32fe9c3775dc5c007",
-        "source_original_bytes": 2704
+        "source_original_bytes": 2704,
+        "v5_package_path": "scripts/build_uart_firmware.ps1"
       },
       "scripts/program_uart_firmware.ps1": {
-        "path": "scripts/program_uart_firmware.ps1",
+        "path": "evidence/previous_source_v5/scripts/program_uart_firmware.ps1",
         "sha256": "15833b6b023e5356e49d77aec713b0720db1a495678e247b0c07e25f10f0c524",
         "bytes": 3227,
         "source_original_sha256": "15833b6b023e5356e49d77aec713b0720db1a495678e247b0c07e25f10f0c524",
-        "source_original_bytes": 3227
+        "source_original_bytes": 3227,
+        "v5_package_path": "scripts/program_uart_firmware.ps1"
       },
       "scripts/load_uart_image.tcl": {
         "path": "scripts/load_uart_image.tcl",
@@ -1628,5 +1632,6 @@
   "evidence_inputs_unchanged_during_audit": true,
   "evidence_file_count": 89,
   "updated_utc": "2026-11-01T02:37:32.649908+00:00",
-  "packaged_copy_note": "Included record hashes address packaged bytes; source_original_* retains original identifiers; numerical results unchanged"
+  "packaged_copy_note": "Included record hashes address packaged bytes; source_original_* retains original identifiers; numerical results unchanged",
+  "v6_copy_note": "Old comparison source bytes are archived separately; updated runtime paths are not old performance-test sources."
 }
